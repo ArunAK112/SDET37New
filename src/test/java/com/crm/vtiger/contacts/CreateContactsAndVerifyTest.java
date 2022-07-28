@@ -1,45 +1,61 @@
 package com.crm.vtiger.contacts;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.vtiger.genericLib.FileLib;
-import com.vtiger.genericLib.IAutoConsts;
+import com.lexnod.genericLib.ExcelFileLibrary;
+import com.lexnod.genericLib.IAutoConstants;
+import com.lexnod.genericLib.JavaUtility;
+import com.lexnod.genericLib.PropertyFileLibrary;
+import com.lexnod.genericLib.WebDriverCommonLibrary;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 /**
  * 
  * @author ARUN
  *
  */
-public class CreateContactsAndVerifyTest implements IAutoConsts {
+public class CreateContactsAndVerifyTest implements IAutoConstants {
 
 	public static void main(String[] args) throws Throwable {
-		
-		FileLib flib = new FileLib();
 
-		// setting up browser
-		WebDriverManager.firefoxdriver().setup();
+		ExcelFileLibrary elib = new ExcelFileLibrary();
+		PropertyFileLibrary plib = new PropertyFileLibrary();
+		JavaUtility jlib = new JavaUtility();
+		WebDriverCommonLibrary wlib = new WebDriverCommonLibrary();
 
-		// creating object for browser
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = null;
+
+		String browser = plib.getPropertyData("browser");
+
+		if (browser.equalsIgnoreCase("firefox")) {
+			// setting up browser
+			WebDriverManager.firefoxdriver().setup();
+
+			// creating object for browser
+			driver = new FirefoxDriver();
+		} else if (browser.equalsIgnoreCase("chrome")) {
+			// setting up browser
+			WebDriverManager.chromedriver().setup();
+
+			// creating object for browser
+			driver = new ChromeDriver();
+		}
 
 		// maximizing the browser
-		driver.manage().window().maximize();
+		wlib.maximizeTheWindow(driver);
 
 		// passing the url
-		driver.get(flib.readPropertyData(PROP_PATH, "url"));
+		driver.get(plib.getPropertyData("url"));
 
 		// passing wait condition
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		wlib.waitTillPageGetsLoadImplicitlyWait(driver, 10);
 
 		// VERIFYING V-TIGER LOGIN PAGE IS DISPLAYED OR NOT
 		String loginTitle = "vtiger CRM 5 - Commercial Open Source CRM";
@@ -50,15 +66,12 @@ public class CreateContactsAndVerifyTest implements IAutoConsts {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys(flib.readPropertyData(PROP_PATH, "username"));
-		driver.findElement(By.name("user_password")).sendKeys(flib.readPropertyData(PROP_PATH,"password"));
+		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
+		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
 		driver.findElement(By.id("submitButton")).submit();
 
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		// passing explicitly wait for getting home page to loaded
-		wait.until(ExpectedConditions.titleContains("Administrator"));
+		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
 
 		// clicking on contacts module
@@ -98,8 +111,7 @@ public class CreateContactsAndVerifyTest implements IAutoConsts {
 
 		// mouse hover to administration link
 		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		Actions action = new Actions(driver);
-		action.moveToElement(adminElement).perform();
+		wlib.mouseHoverOnElement(adminElement, driver);
 
 		// click on signout link
 		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();

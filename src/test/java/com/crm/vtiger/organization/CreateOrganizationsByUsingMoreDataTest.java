@@ -1,38 +1,55 @@
 package com.crm.vtiger.organization;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.lexnod.genericLib.ExcelFileLibrary;
+import com.lexnod.genericLib.JavaUtility;
+import com.lexnod.genericLib.PropertyFileLibrary;
+import com.lexnod.genericLib.WebDriverCommonLibrary;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class CreateOrganizationsByUsingMoreDataTest {
 
+	public static void main(String[] args) throws Throwable {
 
-	public static void main(String[] args) {
+		ExcelFileLibrary elib = new ExcelFileLibrary();
+		PropertyFileLibrary plib = new PropertyFileLibrary();
+		JavaUtility jlib = new JavaUtility();
+		WebDriverCommonLibrary wlib = new WebDriverCommonLibrary();
 
-		// setting up browser
-		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver = null;
 
-		// creating object for browser
-		WebDriver driver = new FirefoxDriver();
+		String browser = plib.getPropertyData("browser");
+
+		if (browser.equalsIgnoreCase("firefox")) {
+			// setting up browser
+			WebDriverManager.firefoxdriver().setup();
+
+			// creating object for browser
+			driver = new FirefoxDriver();
+		} else if (browser.equalsIgnoreCase("chrome")) {
+			// setting up browser
+			WebDriverManager.chromedriver().setup();
+
+			// creating object for browser
+			driver = new ChromeDriver();
+		}
 
 		// maximizing the browser
-		driver.manage().window().maximize();
+		wlib.maximizeTheWindow(driver);
 
 		// passing the url
-		driver.get("http://localhost:8888/");
+		driver.get(plib.getPropertyData("url"));
 
 		// passing wait condition
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		wlib.waitTillPageGetsLoadImplicitlyWait(driver, 10);
 
 		// VERIFYING V-TIGER LOGIN PAGE IS DISPLAYED OR NOT
 		String loginTitle = "vtiger CRM 5 - Commercial Open Source CRM";
@@ -43,15 +60,12 @@ public class CreateOrganizationsByUsingMoreDataTest {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys("admin");
-		driver.findElement(By.name("user_password")).sendKeys("admin");
+		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
+		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
 		driver.findElement(By.id("submitButton")).submit();
 
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		// passing explicitly wait for getting home page to loaded
-		wait.until(ExpectedConditions.titleContains("Administrator"));
+		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
 
 		// click on organization module
@@ -70,12 +84,12 @@ public class CreateOrganizationsByUsingMoreDataTest {
 
 		// Entering the organization name
 		driver.findElement(By.name("accountname")).sendKeys("AK New Enterprises2");
-		
-		//select industry type dropdown
+
+		// select industry type dropdown
 		Select select = new Select(driver.findElement(By.name("industry")));
 		select.selectByValue("Communications");
-		
-		//select account type drop down
+
+		// select account type drop down
 		Select select2 = new Select(driver.findElement(By.name("accounttype")));
 		select2.selectByValue("Investor");
 
@@ -92,8 +106,7 @@ public class CreateOrganizationsByUsingMoreDataTest {
 
 		// mouse hover to administration link
 		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		Actions action1 = new Actions(driver);
-		action1.moveToElement(adminElement).perform();
+		wlib.mouseHoverOnElement(adminElement, driver);
 
 		// click on signout link
 		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
