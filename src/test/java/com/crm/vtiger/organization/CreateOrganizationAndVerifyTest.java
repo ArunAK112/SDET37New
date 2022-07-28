@@ -82,14 +82,15 @@ public class CreateOrganizationAndVerifyTest {
 		driver.findElement(By.xpath("//img[@title='Create Organization...']")).click();
 
 		// Entering the organization name
-		driver.findElement(By.name("accountname")).sendKeys("AK New Enterprises");
+		String organizationName = elib.getExcelData("Organization", 2, 0)+jlib.getRandonNumber(100);
+		driver.findElement(By.name("accountname")).sendKeys(organizationName);
 
 		// click on save button
 		driver.findElement(By.xpath("(//input[@class='crmbutton small save'])[1]")).click();
 
 		// verification
-		String organizationName = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-		if (organizationName.contains("AK New Enterprises")) {
+		String organizationNameVerify = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
+		if (organizationNameVerify.contains(organizationName)) {
 			System.out.println("Organization name created, TRUE");
 		} else {
 			System.out.println("Organization name not created, FALSE");

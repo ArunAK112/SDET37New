@@ -1,17 +1,10 @@
 package com.crm.vtiger.Invoice;
 
-import java.io.FileInputStream;
-import java.util.Set;
-
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -111,7 +104,7 @@ public class CreateInvoiceWithSalesAndOrganizationTest {
 		driver.findElement(By.xpath("//input[@name='search']")).click();
 
 		// selecting value
-		driver.findElement(By.xpath("//a[text()='AKM']")).click();
+		driver.findElement(By.id("1")).click();
 
 		// switching to parent window
 		driver.switchTo().window(parentId);
@@ -128,7 +121,7 @@ public class CreateInvoiceWithSalesAndOrganizationTest {
 		driver.findElement(By.xpath("//input[@name='search']")).click();
 
 		// selecting values
-		driver.findElement(By.xpath("//a[text()='AK Enterprises']")).click();
+		driver.findElement(By.id("1")).click();
 
 		// clicking on ok (ALERT)
 		driver.switchTo().alert().accept();

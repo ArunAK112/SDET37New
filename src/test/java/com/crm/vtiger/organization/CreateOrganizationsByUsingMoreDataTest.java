@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.lexnod.genericLib.ExcelFileLibrary;
@@ -83,22 +82,23 @@ public class CreateOrganizationsByUsingMoreDataTest {
 		driver.findElement(By.xpath("//img[@title='Create Organization...']")).click();
 
 		// Entering the organization name
-		driver.findElement(By.name("accountname")).sendKeys("AK New Enterprises2");
+		String organizationName = elib.getExcelData("Organization", 1, 0)+jlib.getRandonNumber(100);
+		driver.findElement(By.name("accountname")).sendKeys(organizationName);
 
 		// select industry type dropdown
-		Select select = new Select(driver.findElement(By.name("industry")));
-		select.selectByValue("Communications");
+		WebElement industryDropdown = driver.findElement(By.name("industry"));
+		wlib.select(industryDropdown, "Communications");
 
 		// select account type drop down
-		Select select2 = new Select(driver.findElement(By.name("accounttype")));
-		select2.selectByValue("Investor");
+		WebElement accountTypeDropdown = driver.findElement(By.name("accounttype"));
+		wlib.select(accountTypeDropdown, "Investor");
 
 		// click on save button
 		driver.findElement(By.xpath("(//input[@class='crmbutton small save'])[1]")).click();
 
 		// verification
-		String organizationName = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-		if (organizationName.contains("AK New Enterprises2")) {
+		String organizationNameVerify = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
+		if (organizationNameVerify.contains(organizationName)) {
 			System.out.println("Organization name created, TRUE");
 		} else {
 			System.out.println("Organization name not created, FALSE");

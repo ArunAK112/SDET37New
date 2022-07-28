@@ -86,7 +86,8 @@ public class CreateSalesOrderwithOpportunitiesTest {
 		driver.findElement(By.xpath("//img[@title='Create Sales Order...']")).click();
 
 		// entering values on subjectfield
-		driver.findElement(By.xpath("//input[@name='subject']")).sendKeys("AKM");
+		String subject = elib.getExcelData("salesOrder", 1, 0);
+		driver.findElement(By.xpath("//input[@name='subject']")).sendKeys(subject);
 
 		// clicking opportunity img
 		driver.findElement(By.xpath("//img[@tabindex='']")).click();
@@ -106,10 +107,10 @@ public class CreateSalesOrderwithOpportunitiesTest {
 		wlib.select(statusDropdown, "Created");
 
 		// entering due date
-		// driver.findElement(By.id("jscal_field_duedate")).sendKeys("2022-07-15");
-		driver.findElement(By.xpath("//img[@id='jscal_trigger_duedate']")).click();
-		WebElement date = driver.findElement(By.xpath("//td[contains(text(),'15')]"));
-		date.click();
+		driver.findElement(By.id("jscal_field_duedate")).sendKeys(elib.getExcelData("salesOrder", 1, 1));
+//		driver.findElement(By.xpath("//img[@id='jscal_trigger_duedate']")).click();
+//		WebElement date = driver.findElement(By.xpath("//td[contains(text(),'15')]"));
+//		date.click();
 		System.out.println("Due date selected sucessfully");
 
 		// clicking on organization img
@@ -137,10 +138,10 @@ public class CreateSalesOrderwithOpportunitiesTest {
 				driver.findElement(By.xpath("//b[text()='Address Information']")));
 
 		// entering billing adddress
-		driver.findElement(By.xpath("//textarea[@name='bill_street']")).sendKeys("Dummy address for billing address");
+		driver.findElement(By.xpath("//textarea[@name='bill_street']")).sendKeys(elib.getExcelData("salesOrder", 1, 2));
 
 		// entering shipping address
-		driver.findElement(By.xpath("//textarea[@name='ship_street']")).sendKeys("dummy shipping address");
+		driver.findElement(By.xpath("//textarea[@name='ship_street']")).sendKeys(elib.getExcelData("salesOrder", 1, 3));
 
 		// scrolldown to item details
 		jse.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//b[text()='Item Details']")));
@@ -165,7 +166,7 @@ public class CreateSalesOrderwithOpportunitiesTest {
 
 		// verify sales order is created or not
 		String salesText = driver.findElement(By.xpath("//span[@class='lvtHeaderText']")).getText();
-		if (salesText.contains("AKM")) {
+		if (salesText.contains(subject)) {
 			System.out.println("Sales order is created, PASS");
 		} else {
 			System.out.println("Sales order is not created, FAIL");

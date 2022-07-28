@@ -83,11 +83,12 @@ public class CreateDocumentAndVerifyTest {
 		driver.findElement(By.xpath("//img[@title='Create Document...']")).click();
 
 		// enter title field
-		driver.findElement(By.name("notes_title")).sendKeys("DemoDocuments");
+		String titleField = elib.getExcelData("Documents", 1, 0);
+		driver.findElement(By.name("notes_title")).sendKeys(titleField);
 
 		// entering details in the frame
 		driver.findElement(By.xpath("//iframe[@title='Rich text editor, notecontent, press ALT 0 for help.']"))
-				.sendKeys("This is working");
+				.sendKeys(elib.getExcelData("Documents", 1, 1));
 
 //		Thread.sleep(3000);
 //		driver.switchTo().frame(frameElement);
@@ -114,7 +115,7 @@ public class CreateDocumentAndVerifyTest {
 
 		// verify documents is created or not
 		String documents = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-		if (documents.contains("DemoDocuments")) {
+		if (documents.contains(titleField)) {
 			System.out.println("Document is created, PASS");
 		} else {
 			System.out.println("Document is not created, FAIL");

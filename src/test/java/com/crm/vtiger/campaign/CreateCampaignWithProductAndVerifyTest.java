@@ -97,7 +97,8 @@ public class CreateCampaignWithProductAndVerifyTest {
 		driver.findElement(By.xpath("//img[@title='Create Campaign...']")).click();
 
 		// enter campaign name
-		driver.findElement(By.name("campaignname")).sendKeys("Advertisement");
+		String campaignName = elib.getExcelData("Campaign", 1, 0)+jlib.getRandonNumber(100);
+		driver.findElement(By.name("campaignname")).sendKeys(campaignName);
 
 		// click on add product img
 		driver.findElement(By.xpath("//img[@title='Select']")).click();
@@ -107,13 +108,13 @@ public class CreateCampaignWithProductAndVerifyTest {
 		wlib.switchToWindow("Products&action", driver);
 
 		// entering the product name
-		driver.findElement(By.id("search_txt")).sendKeys("RK Product");
+		driver.findElement(By.id("search_txt")).sendKeys(elib.getExcelData("Product", 1, 0));
 
 		// click on search button
 		driver.findElement(By.name("search")).click();
 
 		// select product
-		driver.findElement(By.xpath("//a[text()='RK Product']")).click();
+		driver.findElement(By.id("1")).click();
 
 		// switch to main window
 		driver.switchTo().window(parentId);
@@ -123,7 +124,7 @@ public class CreateCampaignWithProductAndVerifyTest {
 
 		// verify the campaign is created or not
 		String campaign = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-		if (campaign.contains("Advertisement")) {
+		if (campaign.contains(campaignName)) {
 			System.out.println("Campaign is created, PASS");
 		} else {
 			System.out.println("Campaign is not created, FAIL");

@@ -98,8 +98,7 @@ public class CreateAssetsWithInvoiceTest {
 		driver.findElement(By.xpath("//input[@name='serialnumber']")).sendKeys(elib.getExcelData("Assets", 1, 1));
 
 		// clicking on product name img
-		driver.findElement(By.xpath("//input[@name='product_display']/..//img[@src='themes/softed/images/select.gif']"))
-				.click();
+		driver.findElement(By.xpath("//input[@name='product_display']/..//img[@src='themes/softed/images/select.gif']")).click();
 
 		// performing action on product tab
 		String parentId = driver.getWindowHandle();
@@ -130,7 +129,7 @@ public class CreateAssetsWithInvoiceTest {
 		driver.findElement(By.xpath("//input[@name='search']")).click();
 
 		// selecting value
-		driver.findElement(By.xpath("//a[text()='AK Enterprises']")).click();
+		driver.findElement(By.id("1")).click();
 
 		// switch to main window
 		driver.switchTo().window(parentId);

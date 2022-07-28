@@ -96,7 +96,8 @@ public class CreateOrganization_ContactAndVerifyTest {
 		}
 
 		// Entering the organization name
-		driver.findElement(By.name("accountname")).sendKeys("AK Enterprises");
+		String organizationName = elib.getExcelData("Organization", 2, 0)+jlib.getRandonNumber(100);
+		driver.findElement(By.name("accountname")).sendKeys(organizationName);
 
 		// Selecting Industry
 		WebElement industryDropDown = driver.findElement(By.xpath("//select[@name='industry']"));
@@ -107,7 +108,7 @@ public class CreateOrganization_ContactAndVerifyTest {
 		wlib.select(typeDropdown, "Competitor");
 
 		// entering email
-		driver.findElement(By.id("email1")).sendKeys("arun112@gmail.com");
+		driver.findElement(By.id("email1")).sendKeys(elib.getExcelData("Organization", 1, 1));
 
 		// click on save button
 		driver.findElement(By.xpath("(//input[@class='crmbutton small save'])[1]")).click();
@@ -149,10 +150,11 @@ public class CreateOrganization_ContactAndVerifyTest {
 		select2.selectByValue("Mr.");
 
 		// entering firstname
-		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("Arun");
+		String firstName = elib.getExcelData("contacts", 1, 0)+jlib.getRandonNumber(100);
+		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys(firstName);
 
 		// entering lastname
-		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("K");
+		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys(elib.getExcelData("contacts", 1, 1)+jlib.getRandonNumber(100));
 
 		// clicking on orgnization name
 		driver.findElement(By.xpath("//tbody/tr[5]/td[2]/img[1]")).click();
@@ -160,9 +162,9 @@ public class CreateOrganization_ContactAndVerifyTest {
 		wlib.switchToWindow("Accounts&action", driver);
 
 		// searching the organization name and clicking it
-		driver.findElement(By.name("search_text")).sendKeys("AK Enterprises");
+		driver.findElement(By.name("search_text")).sendKeys(elib.getExcelData("Organization", 2, 0));
 		driver.findElement(By.name("search")).click();
-		driver.findElement(By.xpath("//a[text()='AK Enterprises']")).click();
+		driver.findElement(By.id("1")).click();
 
 		// switching to main window
 		driver.switchTo().window(parentId);
@@ -172,7 +174,7 @@ public class CreateOrganization_ContactAndVerifyTest {
 
 		// verify whether contact is created or not
 		String contact = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-		if (contact.contains("Arun")) {
+		if (contact.contains(firstName)) {
 			System.out.println("Contact is created, PASS");
 		} else {
 			System.out.println("Contact is not created, FAIL");

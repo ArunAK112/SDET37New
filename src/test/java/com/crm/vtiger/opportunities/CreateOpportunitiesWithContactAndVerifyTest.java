@@ -85,7 +85,8 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 		driver.findElement(By.xpath("//img[@title='Create Opportunity...']")).click();
 
 		// enter value in opportunity name field
-		driver.findElement(By.xpath("//input[@name='potentialname']")).sendKeys("AK Opportunity");
+		String opportunityName = elib.getExcelData("opportunities", 1, 0)+ jlib.getRandonNumber(100);
+		driver.findElement(By.xpath("//input[@name='potentialname']")).sendKeys(opportunityName);
 
 		// select relatedto dropdown
 		WebElement dropdownAddress = driver.findElement(By.id("related_to_type"));
@@ -99,7 +100,7 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 		wlib.switchToWindow("Contacts&action", driver);
 
 		// enter value in search field
-		driver.findElement(By.xpath("//input[@id='search_txt']")).sendKeys("K");
+		driver.findElement(By.xpath("//input[@id='search_txt']")).sendKeys(elib.getExcelData("contacts", 1, 1));
 
 		// click on search now button
 		driver.findElement(By.xpath("//input[@name='search']")).click();
@@ -117,7 +118,7 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 		dateElement.clear();
 
 		// entering date in date field
-		dateElement.sendKeys("2022-07-15");
+		dateElement.sendKeys(elib.getExcelData("opportunities", 1, 1));
 
 		// selecting sales stage dropdown
 		WebElement salesDropdownElement = driver.findElement(By.xpath("//select[@name='sales_stage']"));
@@ -140,7 +141,7 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 
 		// verification
 		String opportunity = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-		if (opportunity.contains("AK Opportunity")) {
+		if (opportunity.contains(opportunityName)) {
 			System.out.println("Opportunity is created, PASS");
 		} else {
 			System.out.println("Opportunity is not created, FAIL");

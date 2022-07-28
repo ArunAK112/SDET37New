@@ -94,13 +94,13 @@ public class CreateEmailAndVerifyTest {
 		wlib.switchToWindow("Contacts&action", driver);
 
 		// search box
-		driver.findElement(By.id("search_txt")).sendKeys("K");
+		driver.findElement(By.id("search_txt")).sendKeys(elib.getExcelData("contacts", 1, 1));
 
 		// click on search button
 		driver.findElement(By.name("search")).click();
 
 		// clicking on contact
-		driver.findElement(By.xpath("//a[text()='Arun K']")).click();
+		driver.findElement(By.id("1")).click();
 
 		// conformation
 		System.out.println("Email is selected");
@@ -109,11 +109,11 @@ public class CreateEmailAndVerifyTest {
 		driver.switchTo().window(subParent);
 
 		// entering subject
-		driver.findElement(By.id("subject")).sendKeys("this is demo subject");
+		driver.findElement(By.id("subject")).sendKeys(elib.getExcelData("composeMail", 1, 0));
 
 		// entering details in body
 		driver.findElement(By.xpath("//iframe[@title='Rich text editor, description, press ALT 0 for help.']"))
-				.sendKeys("this is to check that body is accepting field or not");
+				.sendKeys(elib.getExcelData("composeMail", 1, 1));
 
 		// conformation
 		System.out.println("body field are filled");

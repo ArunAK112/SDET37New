@@ -93,17 +93,18 @@ public class CreateContactsAndVerifyTest implements IAutoConstants {
 		select2.selectByValue("Mr.");
 
 		// entering firstname
-		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("Arun");
+		String firstName = elib.getExcelData("contacts", 3, 0);
+		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys(firstName);
 
 		// entering lastname
-		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("Punk");
+		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys(elib.getExcelData("contacts", 3, 1));
 
 		// clicking on save
 		driver.findElement(By.xpath("//input[@class='crmButton small save']")).click();
 
 		// verify whether contact is created or not
 		String contact = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-		if (contact.contains("Arun")) {
+		if (contact.contains(firstName)) {
 			System.out.println("Contact is created, PASS");
 		} else {
 			System.out.println("Contact is not created, FAIL");

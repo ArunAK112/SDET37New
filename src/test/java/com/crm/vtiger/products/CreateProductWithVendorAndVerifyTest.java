@@ -1,14 +1,10 @@
 package com.crm.vtiger.products;
 
-import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -90,14 +86,15 @@ public class CreateProductWithVendorAndVerifyTest {
 		driver.findElement(By.xpath("//img[@title='Create Vendor...']")).click();
 		
 		//enter value in vendor name
-		driver.findElement(By.name("vendorname")).sendKeys("KiranRaj");
+		String vendorName = elib.getExcelData("vendors", 1, 0);
+		driver.findElement(By.name("vendorname")).sendKeys(elib.getExcelData("vendors", 1, 0));
 		
 		//click on save button
 		driver.findElement(By.xpath("(//input[@title='Save [Alt+S]'])[1]")).click();
 		
 		//verifying vendor is created or not
 		String vendor=driver.findElement(By.xpath("//span[@class='lvtHeaderText']")).getText();
-		if(vendor.contains("KiranRaj"))
+		if(vendor.contains(vendorName))
 		{
 			System.out.println("Vendor is created, PASS");
 		}else
@@ -122,7 +119,8 @@ public class CreateProductWithVendorAndVerifyTest {
 		driver.findElement(By.xpath("//img[@title='Create Product...']")).click();
 		
 		//entering details in product name tab
-		driver.findElement(By.name("productname")).sendKeys("RK Product");
+		String productName = elib.getExcelData("Product", 1, 0);
+		driver.findElement(By.name("productname")).sendKeys(productName);
 		
 		//selecting vendorname
 		driver.findElement(By.xpath("//img[@title='Select']")).click();
@@ -130,13 +128,13 @@ public class CreateProductWithVendorAndVerifyTest {
 		wlib.switchToWindow("Vendors&action", driver);
 		
 		//entering the vendor name
-		driver.findElement(By.id("search_txt")).sendKeys("KiranRaj");
+		driver.findElement(By.id("search_txt")).sendKeys(vendorName);
 		
 		//click on search button
 		driver.findElement(By.name("search")).click();
 		
 		//select vendor name
-		driver.findElement(By.xpath("//a[text()='KiranRaj']")).click();
+		driver.findElement(By.id("1")).click();
 		
 		//switch back to main window
 		driver.switchTo().window(parentId);
@@ -146,7 +144,7 @@ public class CreateProductWithVendorAndVerifyTest {
 		
 		//verify whether product is created or not
 		String product = driver.findElement(By.xpath("//span[@class='lvtHeaderText']")).getText();
-		if(product.contains("RK Product"))
+		if(product.contains(productName))
 		{
 			System.out.println("Product is created, PASS");
 		}else

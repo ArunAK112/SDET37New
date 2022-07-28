@@ -93,28 +93,21 @@ public class CreateContactWithMoreDataAndVerifyTest {
 		select2.selectByValue("Mr.");
 
 		// entering firstname
-		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("CM");
+		String firstName = elib.getExcelData("contacts", 2, 0);
+		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys(firstName);
 
 		// entering lastname
-		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("Punk");
+		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys(elib.getExcelData("contacts", 2, 1));
 
 		// clicking on orgnization name
 		driver.findElement(By.xpath("//tbody/tr[5]/td[2]/img[1]")).click();
 		String parentId = driver.getWindowHandle();
-		Set<String> allId = driver.getWindowHandles();
-
-		for (String popup : allId) {
-			driver.switchTo().window(popup);
-			String actTitle = driver.getTitle();
-			if (actTitle.contains("Accounts&action")) {
-				break;
-			}
-		}
+		wlib.switchToWindow("Accounts&action", driver);
 
 		// searching the organization name and clicking it
-		driver.findElement(By.name("search_text")).sendKeys("AK New Enterprises");
+		driver.findElement(By.name("search_text")).sendKeys(elib.getExcelData("Organization", 2, 1));
 		driver.findElement(By.name("search")).click();
-		driver.findElement(By.xpath("//a[text()='AK New Enterprises']")).click();
+		driver.findElement(By.id("1")).click();
 
 		// switching to main window
 		driver.switchTo().window(parentId);
@@ -124,7 +117,7 @@ public class CreateContactWithMoreDataAndVerifyTest {
 
 		// verify whether contact is created or not
 		String contact = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-		if (contact.contains("CM")) {
+		if (contact.contains(firstName)) {
 			System.out.println("Contact is created, PASS");
 		} else {
 			System.out.println("Contact is not created, FAIL");
