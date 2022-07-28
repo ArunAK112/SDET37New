@@ -86,7 +86,7 @@ public class CreateSalesOrderwithOpportunitiesTest {
 		driver.findElement(By.xpath("//img[@title='Create Sales Order...']")).click();
 
 		// entering values on subjectfield
-		String subject = elib.getExcelData("salesOrder", 1, 0);
+		String subject = elib.getExcelData("salesOrder", 1, 0)+jlib.getRandonNumber(100);
 		driver.findElement(By.xpath("//input[@name='subject']")).sendKeys(subject);
 
 		// clicking opportunity img
@@ -104,7 +104,8 @@ public class CreateSalesOrderwithOpportunitiesTest {
 
 		// selecting status
 		WebElement statusDropdown = driver.findElement(By.xpath("//select[@name='sostatus']"));
-		wlib.select(statusDropdown, "Created");
+		wlib.getAllTheOptionsFromDropdown(statusDropdown);
+		wlib.select(statusDropdown, elib.getExcelData("AllDropDown", 3, 4));
 
 		// entering due date
 		driver.findElement(By.id("jscal_field_duedate")).sendKeys(elib.getExcelData("salesOrder", 1, 1));
@@ -130,7 +131,8 @@ public class CreateSalesOrderwithOpportunitiesTest {
 
 		// selecting invoice status dropdown
 		WebElement invoiceStatusDropdown = driver.findElement(By.xpath("//select[@name='invoicestatus']"));
-		wlib.select(invoiceStatusDropdown, "Approved");
+		wlib.getAllTheOptionsFromDropdown(invoiceStatusDropdown);
+		wlib.select(invoiceStatusDropdown, elib.getExcelData("AllDropDown", 2, 3));
 
 		// scrolldown
 		JavascriptExecutor jse = (JavascriptExecutor) driver;

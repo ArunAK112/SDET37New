@@ -101,11 +101,13 @@ public class CreateOrganization_ContactAndVerifyTest {
 
 		// Selecting Industry
 		WebElement industryDropDown = driver.findElement(By.xpath("//select[@name='industry']"));
-		wlib.select(industryDropDown, "Banking");
+		wlib.getAllTheOptionsFromDropdown(industryDropDown);
+		wlib.select(industryDropDown, elib.getExcelData("AllDropDown", 2, 1));
 
 		// selecting type
 		WebElement typeDropdown = driver.findElement(By.xpath("//select[@name='accounttype']"));
-		wlib.select(typeDropdown, "Competitor");
+		wlib.getAllTheOptionsFromDropdown(typeDropdown);
+		wlib.select(typeDropdown, elib.getExcelData("AllDropDown", 2, 3));
 
 		// entering email
 		driver.findElement(By.id("email1")).sendKeys(elib.getExcelData("Organization", 1, 1));
@@ -146,8 +148,10 @@ public class CreateOrganization_ContactAndVerifyTest {
 		}
 
 		// selecting salutation
-		Select select2 = new Select(driver.findElement(By.xpath("//select[@name='salutationtype']")));
-		select2.selectByValue("Mr.");
+		WebElement salutationDropdown = driver.findElement(By.xpath("//select[@name='salutationtype']"));
+		Select select2 = new Select(salutationDropdown);
+		wlib.getAllTheOptionsFromDropdown(salutationDropdown);
+		select2.selectByValue(elib.getExcelData("AllDropDown", 1, 0));
 
 		// entering firstname
 		String firstName = elib.getExcelData("contacts", 1, 0)+jlib.getRandonNumber(100);

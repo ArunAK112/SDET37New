@@ -89,11 +89,13 @@ public class CreateContactWithMoreDataAndVerifyTest {
 		driver.findElement(By.xpath("//img[@title='Create Contact...']")).click();
 
 		// selecting salutation
-		Select select2 = new Select(driver.findElement(By.xpath("//select[@name='salutationtype']")));
-		select2.selectByValue("Mr.");
+		WebElement salutationDropdown = driver.findElement(By.xpath("//select[@name='salutationtype']"));
+		Select select2 = new Select(salutationDropdown);
+		wlib.getAllTheOptionsFromDropdown(salutationDropdown);
+		select2.selectByValue(elib.getExcelData("AllDropDown", 1, 0));
 
 		// entering firstname
-		String firstName = elib.getExcelData("contacts", 2, 0);
+		String firstName = elib.getExcelData("contacts", 2, 0)+jlib.getRandonNumber(100);
 		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys(firstName);
 
 		// entering lastname

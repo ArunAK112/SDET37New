@@ -87,11 +87,11 @@ public class CreateOrganizationsByUsingMoreDataTest {
 
 		// select industry type dropdown
 		WebElement industryDropdown = driver.findElement(By.name("industry"));
-		wlib.select(industryDropdown, "Communications");
+		wlib.select(industryDropdown, elib.getExcelData("AllDropDown", 5, 1));
 
 		// select account type drop down
 		WebElement accountTypeDropdown = driver.findElement(By.name("accounttype"));
-		wlib.select(accountTypeDropdown, "Investor");
+		wlib.select(accountTypeDropdown, elib.getExcelData("AllDropDown", 5, 2));
 
 		// click on save button
 		driver.findElement(By.xpath("(//input[@class='crmbutton small save'])[1]")).click();
