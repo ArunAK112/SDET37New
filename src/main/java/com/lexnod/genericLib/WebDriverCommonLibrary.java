@@ -21,6 +21,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.google.common.io.Files;
+
 /**
  * 
  * @author ARUN
@@ -306,8 +308,9 @@ public class WebDriverCommonLibrary {
 		File src = screenshots.getScreenshotAs(OutputType.FILE);
 		File dest = new File("./screenShots" + screenShotName + ".PNG");
 		try {
-			FileUtils.copyFile(src, dest);
+			Files.copy(src, dest);
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
