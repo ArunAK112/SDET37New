@@ -99,7 +99,7 @@ public class CreateSalesOrderwithOpportunitiesTest {
 		// selecting opportunities
 		driver.findElement(By.xpath("//a[text()='AK Opportunity']")).click();
 
-		// switching baack to parent
+		// switching back to parent
 		driver.switchTo().window(parentId);
 
 		// selecting status

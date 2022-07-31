@@ -80,7 +80,7 @@ public class CreateInvoiceWithSalesAndOrganizationTest {
 			System.out.println("Invoice page is not displayed, FAIL");
 		}
 
-		// clicking on create invlice img
+		// clicking on create invoice img
 		driver.findElement(By.xpath("//img[@title='Create Invoice...']")).click();
 
 		// getting data from the excelfile
