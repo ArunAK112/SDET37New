@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NewContactsPage {
+import com.lexnod.genericLib.WebDriverCommonLibrary;
+
+public class CreateNewContactsPage extends WebDriverCommonLibrary {
 	
 	@FindBy(xpath = "//select[@name='salutationtype']") private WebElement salutationDropdown;
 	@FindBy(xpath = "//input[@name='firstname']") private WebElement firstnameField;
@@ -14,7 +16,7 @@ public class NewContactsPage {
 	@FindBy(xpath = "//input[@class='crmButton small save']") private WebElement saveButton;
 
 	
-	public NewContactsPage(WebDriver driver)
+	public CreateNewContactsPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -44,5 +46,9 @@ public class NewContactsPage {
 		return saveButton;
 	}
 	
+	public void selectSalutationDropdownValue(String value)
+	{
+		select(getSalutationDropdown(), value);
+	}
 	
 }

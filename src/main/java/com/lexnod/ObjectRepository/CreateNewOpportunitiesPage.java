@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NewOpportunitiesPage {
+import com.lexnod.genericLib.WebDriverCommonLibrary;
+
+public class CreateNewOpportunitiesPage extends WebDriverCommonLibrary{
 	
 	@FindBy(xpath = "//input[@name='potentialname']") private WebElement opportunitiesNameField;
 	@FindBy(id = "related_to_type") private WebElement relatedToDropdown;
@@ -16,7 +18,7 @@ public class NewOpportunitiesPage {
 	@FindBy(xpath = "(//input[@type='submit'])[1]") private WebElement saveButton;
 	
 	
-	public NewOpportunitiesPage(WebDriver driver)
+	public CreateNewOpportunitiesPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -56,6 +58,10 @@ public class NewOpportunitiesPage {
 		return saveButton;
 	}
 	
+	public void selectRelatedToDropdown(String value)
+	{
+		select(relatedToDropdown, value);
+	}
 	
 	
 }

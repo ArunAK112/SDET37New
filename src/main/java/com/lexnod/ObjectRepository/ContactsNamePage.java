@@ -16,7 +16,7 @@ public class ContactsNamePage {
 	}
 	
 	
-	public void searchContactsName(String contactsName)
+	public void getContactsName(String contactsName)
 	{
 		searchBox.sendKeys(contactsName);
 		searchNowButton.click();

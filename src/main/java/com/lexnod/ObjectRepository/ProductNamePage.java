@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProductNamePage {
 	
-	@FindBy(id="search_txt") private WebElement searchBox;
+	@FindBy(xpath = "//input[@id='search_txt']") private WebElement searchBox;
 	@FindBy(xpath = "//input[@name='search']") private WebElement searchNowButton;
-	@FindBy(id="1") private WebElement selectFirstMatchingValue;
+	@FindBy(id="popup_product_27") private WebElement selectFirstMatchingValue;
 	
 	public ProductNamePage(WebDriver driver)
 	{
@@ -17,7 +17,7 @@ public class ProductNamePage {
 	}
 	
 	
-	public void searchProductName(String productName)
+	public void getProductName(String productName)
 	{
 		searchBox.sendKeys(productName);
 		searchNowButton.click();

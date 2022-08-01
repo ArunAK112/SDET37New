@@ -18,7 +18,7 @@ public class CampaignsNamePage {
 	}
 	
 	
-	public void searchProductName(String campaignName)
+	public void getProductName(String campaignName)
 	{
 		searchBox.sendKeys(campaignName);
 		searchNowButton.click();

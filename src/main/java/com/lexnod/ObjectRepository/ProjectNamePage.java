@@ -16,7 +16,7 @@ public class ProjectNamePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void searchProjectName(String projectName)
+	public void getProjectName(String projectName)
 	{
 		searchBox.sendKeys(projectName);
 		searchNowButton.click();

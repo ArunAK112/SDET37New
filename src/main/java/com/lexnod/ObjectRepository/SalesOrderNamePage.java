@@ -17,7 +17,7 @@ public class SalesOrderNamePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void searchProjectName(String OrderNumber)
+	public void getProjectName(String OrderNumber)
 	{
 		searchBox.sendKeys(OrderNumber);
 		searchNowButton.click();

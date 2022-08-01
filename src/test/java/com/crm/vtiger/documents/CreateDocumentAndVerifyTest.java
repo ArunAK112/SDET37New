@@ -8,6 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import com.lexnod.ObjectRepository.CreateNewDocumentsPage;
+import com.lexnod.ObjectRepository.DocumentsPage;
+import com.lexnod.ObjectRepository.HomePage;
+import com.lexnod.ObjectRepository.LoginPage;
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -60,16 +64,16 @@ public class CreateDocumentAndVerifyTest {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
-		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
-		driver.findElement(By.id("submitButton")).submit();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(plib.getPropertyData("username"), plib.getPropertyData("password"));
 
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
 		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
 
 		// click on documents module
-		driver.findElement(By.xpath("//a[text()='Documents']")).click();
+		HomePage home = new HomePage(driver);
+		home.clickDocumentsModule();
 
 		// verify documents page is displayed or not
 		String documentsTitle = "Administrator - Documents - vtiger CRM 5 - Commercial Open Source CRM";
@@ -80,16 +84,14 @@ public class CreateDocumentAndVerifyTest {
 		}
 
 		// clicking on create document img
-		driver.findElement(By.xpath("//img[@title='Create Document...']")).click();
+		DocumentsPage documentsPage = new DocumentsPage(driver);
+		documentsPage.clickCreateDocumentsImage();
 
 		// enter title field
+		CreateNewDocumentsPage createNewDocuments = new CreateNewDocumentsPage(driver);
 		String titleField = elib.getExcelData("Documents", 1, 0);
-		driver.findElement(By.name("notes_title")).sendKeys(titleField);
-
-		// entering details in the frame
-		driver.findElement(By.xpath("//iframe[@title='Rich text editor, notecontent, press ALT 0 for help.']"))
-				.sendKeys(elib.getExcelData("Documents", 1, 1));
-
+		createNewDocuments.createDocument(titleField, elib.getExcelData("Documents", 1, 1),"C:\\Users\\ARUN\\OneDrive\\Desktop\\DEMO.txt" );
+		
 //		Thread.sleep(3000);
 //		driver.switchTo().frame(frameElement);
 //		
@@ -102,17 +104,6 @@ public class CreateDocumentAndVerifyTest {
 //		//switchback to default frame
 //		driver.switchTo().defaultContent();
 
-		// scrolldown
-		WebElement scrollElement = driver.findElement(By.xpath("//b[text()='File Information']"));
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("arguments[0].scrollIntoView();", scrollElement);
-
-		// sending file to upload
-		driver.findElement(By.name("filename")).sendKeys("C:\\Users\\ARUN\\OneDrive\\Desktop\\DEMO.txt");
-
-		// click on save
-		driver.findElement(By.xpath("(//input[@type='submit'])[2]")).click();
-
 		// verify documents is created or not
 		String documents = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
 		if (documents.contains(titleField)) {
@@ -120,12 +111,8 @@ public class CreateDocumentAndVerifyTest {
 		} else {
 			System.out.println("Document is not created, FAIL");
 		}
-		// mouse hover to administration link
-		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		wlib.mouseHoverOnElement(adminElement, driver);
-
-		// click on signout link
-		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
+		//signout
+		home.clickSignoutLink(driver);
 
 		// close the browser
 		driver.close();

@@ -5,13 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NewVendorPage {
+public class CreateNewVendorPage {
 	
 	@FindBy(name = "vendorname") private WebElement vendorNameField;
 	@FindBy(xpath = "(//input[@title='Save [Alt+S]'])[1]") private WebElement saveButton;
 	
 	
-	public NewVendorPage(WebDriver driver)
+	public CreateNewVendorPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}

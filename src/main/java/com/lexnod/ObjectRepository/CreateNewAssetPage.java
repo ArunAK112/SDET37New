@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NewAssetPage {
+public class CreateNewAssetPage {
 	
 	@FindBy(xpath = "//input[@name='serialnumber']") private WebElement serialNumberField;
 	@FindBy(xpath = "//input[@name='product_display']/..//img[@src='themes/softed/images/select.gif']") private WebElement productNameImage;
@@ -14,7 +14,7 @@ public class NewAssetPage {
 	@FindBy(xpath = "(//input[@title='Save [Alt+S]'])[2]") private WebElement saveButton;
 	
 	
-	public NewAssetPage(WebDriver driver)
+	public CreateNewAssetPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}

@@ -15,7 +15,7 @@ public class OpportunitiesNamePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void searchOrganizationName(String opportunityName)
+	public void getOrganizationName(String opportunityName)
 	{
 		searchBox.sendKeys(opportunityName);
 		searchNowButton.click();

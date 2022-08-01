@@ -5,6 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.lexnod.ObjectRepository.CampaignsPage;
+import com.lexnod.ObjectRepository.CreateNewCampaignPage;
+import com.lexnod.ObjectRepository.HomePage;
+import com.lexnod.ObjectRepository.LoginPage;
+import com.lexnod.ObjectRepository.ProductNamePage;
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -63,20 +69,16 @@ public class CreateCampaignWithProductAndVerifyTest {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
-		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
-		driver.findElement(By.id("submitButton")).submit();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(plib.getPropertyData("username"), plib.getPropertyData("password"));
 
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
 		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
 
-		// mouse hover to more
-		WebElement moreElement = driver.findElement(By.xpath("//a[text()='More']"));
-		wlib.mouseHoverOnElement(moreElement, driver);
-
-		// click on campaigns
-		driver.findElement(By.xpath("//a[text()='Campaigns']")).click();
+		// mouse hover to more click on campaigns
+		HomePage home =new HomePage(driver);
+		home.clickCampaignModule(driver);
 
 		// verify campaign page is displayed or not
 		String campaignTitle = "Administrator - Campaigns - vtiger CRM 5 - Commercial Open Source CRM";
@@ -87,33 +89,30 @@ public class CreateCampaignWithProductAndVerifyTest {
 		}
 
 		// click on create campaign img
-		driver.findElement(By.xpath("//img[@title='Create Campaign...']")).click();
+		CampaignsPage campaignPage = new CampaignsPage(driver);
+		campaignPage.clickCreateCampaignImage();
 
 		// enter campaign name
+		CreateNewCampaignPage createNewCampaign = new CreateNewCampaignPage(driver);
 		String campaignName = elib.getExcelData("Campaign", 1, 0)+jlib.getRandonNumber(100);
-		driver.findElement(By.name("campaignname")).sendKeys(campaignName);
+		createNewCampaign.getCamapaignNameField().sendKeys(campaignName);
 
 		// click on add product img
-		driver.findElement(By.xpath("//img[@title='Select']")).click();
+		createNewCampaign.getAddProductImage().click();
 
 		// selecting product
 		String parentId = driver.getWindowHandle();
 		wlib.switchToWindow("Products&action", driver);
 
 		// entering the product name
-		driver.findElement(By.id("search_txt")).sendKeys(elib.getExcelData("Product", 1, 0));
-
-		// click on search button
-		driver.findElement(By.name("search")).click();
-
-		// select product
-		driver.findElement(By.id("1")).click();
+		ProductNamePage productName = new ProductNamePage(driver);
+		productName.getProductName(elib.getExcelData("Product", 1, 0));
 
 		// switch to main window
 		driver.switchTo().window(parentId);
 
 		// click on save button
-		driver.findElement(By.xpath("(//input[@title='Save [Alt+S]'])[1]")).click();
+		createNewCampaign.getSavebutton().click();
 
 		// verify the campaign is created or not
 		String campaign = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
@@ -123,12 +122,8 @@ public class CreateCampaignWithProductAndVerifyTest {
 			System.out.println("Campaign is not created, FAIL");
 		}
 
-		// mouse hover to administration link
-		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		wlib.mouseHoverOnElement(adminElement, driver);
-
-		// click on signout link
-		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
+		// signout
+		home.clickSignoutLink(driver);
 
 		// close the browser
 		driver.close();

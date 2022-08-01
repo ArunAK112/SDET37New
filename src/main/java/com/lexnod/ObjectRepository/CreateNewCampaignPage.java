@@ -5,14 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NewCampaignPage {
+public class CreateNewCampaignPage {
 	
 	@FindBy(name = "campaignname") private WebElement camapaignNameField;
 	@FindBy(xpath = "//img[@title='Select']") private WebElement addProductImage;
 	@FindBy(xpath = "(//input[@title='Save [Alt+S]'])[1]") private WebElement savebutton;
 	
 	
-	public NewCampaignPage(WebDriver driver)
+	public CreateNewCampaignPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}

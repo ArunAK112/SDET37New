@@ -1,15 +1,15 @@
 package com.crm.vtiger.opportunities;
 
-import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
+import com.lexnod.ObjectRepository.CreateNewOpportunitiesPage;
+import com.lexnod.ObjectRepository.HomePage;
+import com.lexnod.ObjectRepository.LoginPage;
+import com.lexnod.ObjectRepository.OpportunitiesPage;
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -62,16 +62,16 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
-		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
-		driver.findElement(By.id("submitButton")).submit();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(plib.getPropertyData("username"), plib.getPropertyData("password"));
 
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
 		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
 
 		// clicking on opportunities
-		driver.findElement(By.xpath("//a[@href='index.php?module=Potentials&action=index']")).click();
+		HomePage home = new HomePage(driver);
+		home.clickOpportunitiesModule();
 
 		// verify opportunity page is displayed or not
 		String opportunityTitle = "Administrator - Opportunities - vtiger CRM 5 - Commercial Open Source CRM";
@@ -82,14 +82,18 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 		}
 
 		// clicking on createopportunity img
-		driver.findElement(By.xpath("//img[@title='Create Opportunity...']")).click();
+		OpportunitiesPage opportunitiesPage = new OpportunitiesPage(driver);
+		opportunitiesPage.clickCreateOpportinitiesImage();
 
 		// enter value in opportunity name field
+		CreateNewOpportunitiesPage createNewOpportunity = new CreateNewOpportunitiesPage(driver);
 		String opportunityName = elib.getExcelData("opportunities", 1, 0)+ jlib.getRandonNumber(100);
-		driver.findElement(By.xpath("//input[@name='potentialname']")).sendKeys(opportunityName);
-
+		createNewOpportunity.getOpportunitiesNameField().sendKeys(opportunityName);
+		
 		// select relatedto dropdown
+		//createNewOpportunity.selectRelatedToDropdown("");
 		WebElement dropdownAddress = driver.findElement(By.id("related_to_type"));
+		wlib.getAllTheOptionsFromDropdown(dropdownAddress);
 		wlib.select("Contacts", dropdownAddress);
 
 		// click on relatedto img
@@ -122,6 +126,7 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 
 		// selecting sales stage dropdown
 		WebElement salesDropdownElement = driver.findElement(By.xpath("//select[@name='sales_stage']"));
+		wlib.getAllTheOptionsFromDropdown(salesDropdownElement);
 		wlib.select(salesDropdownElement, "Id. Decision Makers");
 
 		// click on campaign source img

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NewOrganizationPage {
+public class CreateNewOrganizationPage {
 	
 	@FindBy(name = "accountname") private WebElement organizationNameField;
 	@FindBy(xpath = "//select[@name='industry']") private WebElement industryDropdown;
@@ -14,7 +14,7 @@ public class NewOrganizationPage {
 	@FindBy(xpath = "(//input[@class='crmbutton small save'])[1]") private WebElement saveButton;
 	
 
-	public NewOrganizationPage(WebDriver driver)
+	public CreateNewOrganizationPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}

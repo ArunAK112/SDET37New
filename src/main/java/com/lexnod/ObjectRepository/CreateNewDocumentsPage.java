@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NewDocumentsPage {
+public class CreateNewDocumentsPage {
 	
 	@FindBy(name = "notes_title") private WebElement titleField;
 	@FindBy(xpath = "//iframe[@title='Rich text editor, notecontent, press ALT 0 for help.']") private WebElement notesField;
@@ -13,7 +13,7 @@ public class NewDocumentsPage {
 	@FindBy(xpath = "(//input[@type='submit'])[2]") private WebElement saveButton;
 	
 	
-	public NewDocumentsPage(WebDriver driver)
+	public CreateNewDocumentsPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}

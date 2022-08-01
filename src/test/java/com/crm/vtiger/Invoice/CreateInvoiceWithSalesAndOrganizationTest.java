@@ -5,6 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.lexnod.ObjectRepository.CreateNewInvoicePage;
+import com.lexnod.ObjectRepository.HomePage;
+import com.lexnod.ObjectRepository.InvoicePage;
+import com.lexnod.ObjectRepository.LoginPage;
+import com.lexnod.ObjectRepository.OrganizationNamePage;
+import com.lexnod.ObjectRepository.ProductNamePage;
+import com.lexnod.ObjectRepository.SalesOrderNamePage;
+import com.lexnod.ObjectRepository.SalesOrderPage;
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -57,21 +66,17 @@ public class CreateInvoiceWithSalesAndOrganizationTest {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
-		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
-		driver.findElement(By.id("submitButton")).submit();
-
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(plib.getPropertyData("username"), plib.getPropertyData("password"));
+	
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
 		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
 
 		// mouse hover to more
-		WebElement moreElement = driver.findElement(By.xpath("//a[text()='More']"));
-		wlib.mouseHoverOnElement(moreElement, driver);
-
-		// clicking on invoice link
-		driver.findElement(By.xpath("//a[@href='index.php?module=Invoice&action=index']")).click();
-
+		HomePage home = new HomePage(driver);
+		home.clickInvoiceModule(driver);
+		
 		// verifying
 		String invoiceTitle = "Administrator - Invoice - vtiger CRM 5 - Commercial Open Source CRM";
 		if (driver.getTitle().equals(invoiceTitle)) {
@@ -81,48 +86,39 @@ public class CreateInvoiceWithSalesAndOrganizationTest {
 		}
 
 		// clicking on create invoice img
-		driver.findElement(By.xpath("//img[@title='Create Invoice...']")).click();
+		InvoicePage invoicePage = new InvoicePage(driver);
+		invoicePage.clickCreateInvoiceImage();
 
 		// getting data from the excelfile
 		// entering values in subject field
-		driver.findElement(By.xpath("//input[@name='subject']")).sendKeys(elib.getExcelData("Invoice", 1, 0));
+		CreateNewInvoicePage createNewInvoice = new CreateNewInvoicePage(driver);
+		createNewInvoice.getSubjectField().sendKeys(elib.getExcelData("Invoice", 1, 0));
 
 		// entering customer number
-		driver.findElement(By.xpath("//input[@name='customerno']")).sendKeys(elib.getExcelData("Invoice", 1, 1));
+		createNewInvoice.getCustomerNumberField().sendKeys(elib.getExcelData("Invoice", 1, 1));
 
 		// clicking on sales order
-		driver.findElement(By.xpath("//input[@name='salesorder_name']/..//img[@src='themes/softed/images/select.gif']"))
-				.click();
-
+		createNewInvoice.getSelectSalesOrderImage().click();
+		
 		// performing action on create salesorder page
 		String parentId = driver.getWindowHandle();
 		wlib.switchToWindow("SalesOrder&action", driver);
 		// selecting searchbox and sending value
-		driver.findElement(By.id("search_txt")).sendKeys(elib.getExcelData("Invoice", 1, 4));
-
-		// clicking on search now buttom
-		driver.findElement(By.xpath("//input[@name='search']")).click();
-
-		// selecting value
-		driver.findElement(By.id("1")).click();
-
+		SalesOrderNamePage salesOrderName = new SalesOrderNamePage(driver);
+		salesOrderName.getProjectName(elib.getExcelData("Invoice", 1, 4));
+		
 		// switching to parent window
 		driver.switchTo().window(parentId);
 
 		// clicking on organization name img
-		driver.findElement(By.xpath("//input[@id='single_accountid']/..//img[@title='Select']")).click();
+		createNewInvoice.getSelectOrganizationNameImage().click();
 
 		// performing actions on organization window
 		wlib.switchToWindow("Accounts&action", driver);
 		// sending values on search box
-		driver.findElement(By.id("search_txt")).sendKeys(elib.getExcelData("Invoice", 1, 5));
-
-		// clicking on search now buttom
-		driver.findElement(By.xpath("//input[@name='search']")).click();
-
-		// selecting values
-		driver.findElement(By.id("1")).click();
-
+		OrganizationNamePage organizationName = new OrganizationNamePage(driver);
+		organizationName.getOrganizationName(elib.getExcelData("Invoice", 1, 5));
+	
 		// clicking on ok (ALERT)
 		driver.switchTo().alert().accept();
 
@@ -130,33 +126,29 @@ public class CreateInvoiceWithSalesAndOrganizationTest {
 		driver.switchTo().window(parentId);
 
 		// passing value on billing address
-		driver.findElement(By.xpath("//textarea[@name='bill_street']")).sendKeys(elib.getExcelData("Invoice", 1, 2));
+		createNewInvoice.getBillingAddressField().sendKeys(elib.getExcelData("Invoice", 1, 2));
 
 		// passing value on shipping address
-		driver.findElement(By.xpath("//textarea[@name='ship_street']")).sendKeys(elib.getExcelData("Invoice", 1, 3));
+		createNewInvoice.getShippingAddressField().sendKeys(elib.getExcelData("Invoice", 1, 3));
 
 		// item details
-		driver.findElement(By.xpath("//img[@id='searchIcon1']")).click();
+		createNewInvoice.getItemDetailsIamge().click();
 
 		// performing actions on products window
 		wlib.switchToWindow("Products&action", driver);
+		
 		// sending value on search box
-		driver.findElement(By.id("search_txt")).sendKeys(elib.getExcelData("Invoice", 1, 6));
-
-		// click on search now button
-		driver.findElement(By.xpath("//input[@name='search']")).click();
-
-		// selecting values
-		driver.findElement(By.xpath("//a[text()='RK Product']")).click();
+		ProductNamePage productName = new ProductNamePage(driver);
+		productName.getProductName(elib.getExcelData("Invoice", 1, 6));
 
 		// switching to main window
 		driver.switchTo().window(parentId);
 
 		// entering qty
-		driver.findElement(By.xpath("//input[@id='qty1']")).sendKeys(elib.getExcelData("Invoice", 1, 7));
+		createNewInvoice.getQuantityField().sendKeys(elib.getExcelData("Invoice", 1, 7));
 
 		// clicking on save button
-		driver.findElement(By.xpath("(//input[@title='Save [Alt+S]'])[2]")).click();
+		createNewInvoice.getSaveButton().click();
 
 		// verification
 		String invoice = driver.findElement(By.xpath("//span[@class='lvtHeaderText']")).getText();
@@ -166,12 +158,8 @@ public class CreateInvoiceWithSalesAndOrganizationTest {
 			System.out.println("Invoice is not created, FAIL");
 		}
 
-		// mouse hover to administration link
-		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		wlib.mouseHoverOnElement(adminElement, driver);
-
-		// click on signout link
-		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
+		//signout
+		home.clickSignoutLink(driver);
 
 		// close the browser
 		driver.close();

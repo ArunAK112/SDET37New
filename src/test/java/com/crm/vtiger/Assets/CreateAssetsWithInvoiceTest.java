@@ -1,12 +1,17 @@
 package com.crm.vtiger.Assets;
 
-import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
+
+import com.lexnod.ObjectRepository.AssetsPage;
+import com.lexnod.ObjectRepository.CreateNewAssetPage;
+import com.lexnod.ObjectRepository.HomePage;
+import com.lexnod.ObjectRepository.LoginPage;
+import com.lexnod.ObjectRepository.OrganizationNamePage;
+import com.lexnod.ObjectRepository.ProductNamePage;
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -63,20 +68,17 @@ public class CreateAssetsWithInvoiceTest {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
-		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
-		driver.findElement(By.id("submitButton")).submit();
-
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(plib.getPropertyData("username"), plib.getPropertyData("password"));
+		
+		
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
 		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
 
-		// mouse hover to more
-		WebElement moreElement = driver.findElement(By.xpath("//a[text()='More']"));
-		wlib.mouseHoverOnElement(moreElement, driver);
-
-		// click on assets
-		driver.findElement(By.xpath("//a[@name='Assets']")).click();
+		// mouse hover to more and click on assets
+		HomePage home = new HomePage(driver);
+		home.clickAssetsModule(driver);
 
 		// verification
 		String assetsTitle = "Administrator - Assets - vtiger CRM 5 - Commercial Open Source CRM";
@@ -87,58 +89,48 @@ public class CreateAssetsWithInvoiceTest {
 		}
 
 		// clicking on new assets img
-		driver.findElement(By.xpath("//img[@src='themes/softed/images/btnL3Add.gif']")).click();
+		AssetsPage assetPage = new AssetsPage(driver);
+		assetPage.clickCreateAssetsIamge();
 
 		// code for deriving data from excel sheet
 
 //		//entering assetNo field
 //		driver.findElement(By.xpath("//input[@id='asset_no']")).sendKeys(workbook.getSheet("Assets").getRow(1).getCell(0).getStringCellValue());
 
+		CreateNewAssetPage createNewAssets = new CreateNewAssetPage(driver);
 		// entering asset serial number
-		driver.findElement(By.xpath("//input[@name='serialnumber']")).sendKeys(elib.getExcelData("Assets", 1, 1));
+		createNewAssets.getSerialNumberField().sendKeys(elib.getExcelData("Assets", 1, 1));
 
 		// clicking on product name img
-		driver.findElement(By.xpath("//input[@name='product_display']/..//img[@src='themes/softed/images/select.gif']")).click();
+		createNewAssets.getProductNameImage().click();
 
 		// performing action on product tab
 		String parentId = driver.getWindowHandle();
 		wlib.switchToWindow("Products&action", driver);
 
-		// selecting searchbox and sending value
-		driver.findElement(By.id("search_txt")).sendKeys(elib.getExcelData("Assets", 1, 2));
-
-		// clicking on search now buttom
-		driver.findElement(By.xpath("//input[@name='search']")).click();
-
-		// selecting value
-		driver.findElement(By.xpath("//a[text()='RK Product']")).click();
-
+		ProductNamePage productName = new ProductNamePage(driver);
+		productName.getProductName(elib.getExcelData("Assets", 1, 2));
+	
 		// switching to parent window
 		driver.switchTo().window(parentId);
 
 		// clicking on customer name img
-		driver.findElement(By.xpath("//input[@id='account_display']/..//img[@src='themes/softed/images/select.gif']"))
-				.click();
-
-		// performing action on customer name window
+		createNewAssets.getCustomerNameImage().click();
+		
+		// performing action on organizations window
 		wlib.switchToWindow("Accounts&action", driver);
-		// selecting searchbox and sending value
-		driver.findElement(By.id("search_txt")).sendKeys(elib.getExcelData("Assets", 1, 3));
-
-		// clicking on search now buttom
-		driver.findElement(By.xpath("//input[@name='search']")).click();
-
-		// selecting value
-		driver.findElement(By.id("1")).click();
+		
+		OrganizationNamePage organizationName = new OrganizationNamePage(driver);
+		organizationName.getOrganizationName(elib.getExcelData("Assets", 1, 3));
 
 		// switch to main window
 		driver.switchTo().window(parentId);
 
 		// entering asset name
-		driver.findElement(By.xpath("//input[@id='assetname']")).sendKeys(elib.getExcelData("Assets", 1, 4));
+		createNewAssets.getAssetNameField().sendKeys(elib.getExcelData("Assets", 1, 4));
 
 		// click on save button
-		driver.findElement(By.xpath("(//input[@title='Save [Alt+S]'])[2]")).click();
+		createNewAssets.getSaveButton().click();
 
 		// verification
 		String asset = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
@@ -148,12 +140,8 @@ public class CreateAssetsWithInvoiceTest {
 			System.out.println("Asset is not created, FAIL");
 		}
 
-		// mouse hover to administration link
-		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		wlib.mouseHoverOnElement(adminElement, driver);
-
 		// click on signout link
-		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
+		home.clickSignoutLink(driver);
 
 		// close the browser
 		driver.close();
