@@ -63,5 +63,10 @@ public class CreateNewOpportunitiesPage extends WebDriverCommonLibrary{
 		select(relatedToDropdown, value);
 	}
 	
+	public void selectSalesStageDropdown(String value)
+	{
+		select(salesStageDropdown, value);
+	}
+	
 	
 }

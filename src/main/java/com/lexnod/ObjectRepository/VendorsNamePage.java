@@ -17,7 +17,7 @@ public class VendorsNamePage {
 	}
 	
 	
-	public void getProductName(String vendorName)
+	public void getVendorName(String vendorName)
 	{
 		searchBox.sendKeys(vendorName);
 		searchNowButton.click();

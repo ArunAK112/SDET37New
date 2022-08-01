@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CreateNewOrganizationPage {
+import com.lexnod.genericLib.WebDriverCommonLibrary;
+
+public class CreateNewOrganizationPage extends WebDriverCommonLibrary{
 	
 	@FindBy(name = "accountname") private WebElement organizationNameField;
 	@FindBy(xpath = "//select[@name='industry']") private WebElement industryDropdown;
@@ -44,5 +46,13 @@ public class CreateNewOrganizationPage {
 		return saveButton;
 	}
 	
+	public void selectIndustryDropdown(String value)
+	{
+		select(industryDropdown, value);
+	}
 	
+	public void selectTypeDropdown(String value)
+	{
+		select(typeDropdown, value);
+	}
 }

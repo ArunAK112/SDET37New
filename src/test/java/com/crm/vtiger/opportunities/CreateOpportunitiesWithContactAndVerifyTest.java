@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import com.lexnod.ObjectRepository.CampaignsNamePage;
+import com.lexnod.ObjectRepository.ContactsNamePage;
 import com.lexnod.ObjectRepository.CreateNewOpportunitiesPage;
 import com.lexnod.ObjectRepository.HomePage;
 import com.lexnod.ObjectRepository.LoginPage;
@@ -91,33 +93,25 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 		createNewOpportunity.getOpportunitiesNameField().sendKeys(opportunityName);
 		
 		// select relatedto dropdown
-		//createNewOpportunity.selectRelatedToDropdown("");
-		WebElement dropdownAddress = driver.findElement(By.id("related_to_type"));
-		wlib.getAllTheOptionsFromDropdown(dropdownAddress);
-		wlib.select("Contacts", dropdownAddress);
+		createNewOpportunity.selectRelatedToDropdown(elib.getExcelData("AllDropDown", 2, 5));
 
 		// click on relatedto img
-		driver.findElement(By.xpath("//img[@src='themes/softed/images/select.gif' and @tabindex='']")).click();
+		createNewOpportunity.getRelatedToImage().click();
 
 		// switching the window
 		String parentId = driver.getWindowHandle();
 		wlib.switchToWindow("Contacts&action", driver);
 
 		// enter value in search field
-		driver.findElement(By.xpath("//input[@id='search_txt']")).sendKeys(elib.getExcelData("contacts", 1, 1));
-
-		// click on search now button
-		driver.findElement(By.xpath("//input[@name='search']")).click();
-
-		// clicking on contact
-		driver.findElement(By.xpath("//a[text()='Arun K']")).click();
+		ContactsNamePage contactsName = new ContactsNamePage(driver);
+		contactsName.getContactsName(elib.getExcelData("contacts", 1, 1));
 
 		// switch to main window
 		driver.switchTo().window(parentId);
 
 		// expected close date element
-		WebElement dateElement = driver.findElement(By.xpath("//input[@id='jscal_field_closingdate']"));
-
+		WebElement dateElement = createNewOpportunity.getExpectedCloseDateField();
+	
 		// clearing the date field
 		dateElement.clear();
 
@@ -125,24 +119,23 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 		dateElement.sendKeys(elib.getExcelData("opportunities", 1, 1));
 
 		// selecting sales stage dropdown
-		WebElement salesDropdownElement = driver.findElement(By.xpath("//select[@name='sales_stage']"));
-		wlib.getAllTheOptionsFromDropdown(salesDropdownElement);
-		wlib.select(salesDropdownElement, "Id. Decision Makers");
-
+		createNewOpportunity.selectSalesStageDropdown(elib.getExcelData("AllDropDown", 5, 6));
+		
 		// click on campaign source img
-		driver.findElement(By.xpath("//input[@name='campaignname']/..//img")).click();
+		createNewOpportunity.getCampaignSourceImage().click();
 
 		// switching to window
 		wlib.switchToWindow("Campaigns&action", driver);
 
 		// clciking on campaign name
-		driver.findElement(By.xpath("//a[text()='Advertisement']")).click();
+		CampaignsNamePage campaignName = new CampaignsNamePage(driver);
+		campaignName.getCampaignName(elib.getExcelData("Campaign", 1, 0));
 
 		// switching back to main window
 		driver.switchTo().window(parentId);
 
 		// click on save button
-		driver.findElement(By.xpath("(//input[@type='submit'])[1]")).click();
+		createNewOpportunity.getSaveButton().click();
 
 		// verification
 		String opportunity = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
@@ -152,13 +145,9 @@ public class CreateOpportunitiesWithContactAndVerifyTest {
 			System.out.println("Opportunity is not created, FAIL");
 		}
 
-		// mouse hover to administration link
-		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		wlib.mouseHoverOnElement(adminElement, driver);
-
-		// click on signout link
-		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
-
+		//signout
+		home.clickSignoutLink(driver);
+		
 		// close the browser
 		driver.close();
 

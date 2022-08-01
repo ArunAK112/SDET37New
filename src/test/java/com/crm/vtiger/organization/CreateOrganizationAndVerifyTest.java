@@ -5,8 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 
+import com.lexnod.ObjectRepository.CreateNewOrganizationPage;
+import com.lexnod.ObjectRepository.HomePage;
+import com.lexnod.ObjectRepository.LoginPage;
+import com.lexnod.ObjectRepository.OrganizationsPage;
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -59,17 +62,17 @@ public class CreateOrganizationAndVerifyTest {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
-		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
-		driver.findElement(By.id("submitButton")).submit();
-
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(plib.getPropertyData("username"), plib.getPropertyData("password"));
+		
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
 		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
 
 		// click on organization module
-		driver.findElement(By.linkText("Organizations")).click();
-
+		HomePage home = new HomePage(driver);
+		home.clickOrganizationModule();
+		
 		// VERIFY ORGANIZATION PAGE IS DISPLAYED OR NOT
 		String organizationTitle = "Administrator - Organizations - vtiger CRM 5 - Commercial Open Source CRM";
 		if (driver.getTitle().equals(organizationTitle)) {
@@ -79,15 +82,17 @@ public class CreateOrganizationAndVerifyTest {
 		}
 
 		// clicking on create organization button
-		driver.findElement(By.xpath("//img[@title='Create Organization...']")).click();
+		OrganizationsPage organizationsPage = new OrganizationsPage(driver);
+		organizationsPage.clickCreateOrganizationsImage();
 
 		// Entering the organization name
+		CreateNewOrganizationPage createNewOrganization = new CreateNewOrganizationPage(driver);
 		String organizationName = elib.getExcelData("Organization", 2, 0)+jlib.getRandonNumber(100);
-		driver.findElement(By.name("accountname")).sendKeys(organizationName);
+		createNewOrganization.getOrganizationNameField().sendKeys(organizationName);
 
 		// click on save button
-		driver.findElement(By.xpath("(//input[@class='crmbutton small save'])[1]")).click();
-
+		createNewOrganization.getSaveButton().click();
+		
 		// verification
 		String organizationNameVerify = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
 		if (organizationNameVerify.contains(organizationName)) {
@@ -96,12 +101,8 @@ public class CreateOrganizationAndVerifyTest {
 			System.out.println("Organization name not created, FALSE");
 		}
 
-		// mouse hover to administration link
-		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		wlib.mouseHoverOnElement(adminElement, driver);
-
-		// click on signout link
-		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
+		//signout
+		home.clickSignoutLink(driver);
 
 		// close the browser
 		driver.close();

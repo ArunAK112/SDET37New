@@ -5,12 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CreateNewSalesOrderPage {
+import com.lexnod.genericLib.WebDriverCommonLibrary;
+
+public class CreateNewSalesOrderPage extends WebDriverCommonLibrary{
 	
 	@FindBy(xpath = "//input[@name='subject']") private WebElement subjectField;
 	@FindBy(xpath = "//img[@tabindex='']") private WebElement opportunityNameImage;
 	@FindBy(xpath = "//select[@name='sostatus']") private WebElement statusDropDown;
-	@FindBy(xpath = "jscal_field_duedate") private WebElement dueDateField;
+	@FindBy(id = "jscal_field_duedate") private WebElement dueDateField;
 	@FindBy(xpath = "(//img[@src='themes/softed/images/select.gif'])[4]") private WebElement organizationsNameImage;
 	@FindBy(xpath = "//select[@name='invoicestatus']") private WebElement invoiceStatusDropdown;
 	@FindBy(xpath = "//textarea[@name='bill_street']") private WebElement billingAddressField;
@@ -80,7 +82,15 @@ public class CreateNewSalesOrderPage {
 		return saveButton;
 	}
 	
+	public void selectStatusDropdown(String value)
+	{
+		select(statusDropDown, value);
+	}
 	
+	public void selectInvoiceStatusDropdown(String value)
+	{
+		select(invoiceStatusDropdown, value);
+	}
 	
 	
 

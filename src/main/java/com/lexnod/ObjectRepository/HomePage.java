@@ -99,6 +99,12 @@ public class HomePage extends WebDriverCommonLibrary{
 		salesOrderModule.click();
 	}
 	
+	public void clickVendorsModule(WebDriver driver)
+	{
+		mouseHoverOnElement(moreButton, driver);
+		vendorsModule.click();
+	}
+	
 	
 	public void clickSignoutLink(WebDriver driver)
 	{

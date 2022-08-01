@@ -7,6 +7,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+
+import com.lexnod.ObjectRepository.CreateNewSalesOrderPage;
+import com.lexnod.ObjectRepository.HomePage;
+import com.lexnod.ObjectRepository.LoginPage;
+import com.lexnod.ObjectRepository.OpportunitiesNamePage;
+import com.lexnod.ObjectRepository.OrganizationNamePage;
+import com.lexnod.ObjectRepository.ProductNamePage;
+import com.lexnod.ObjectRepository.SalesOrderPage;
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -59,21 +67,17 @@ public class CreateSalesOrderwithOpportunitiesTest {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
-		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
-		driver.findElement(By.id("submitButton")).submit();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(plib.getPropertyData("username"), plib.getPropertyData("password"));
 
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
 		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
-		// mouse hover to more
-		WebElement moreElement = driver.findElement(By.xpath("//a[text()='More']"));
-		Actions action = new Actions(driver);
-		action.moveToElement(moreElement).perform();
-
-		// click on sales order
-		driver.findElement(By.xpath("//a[text()='Sales Order']")).click();
-
+		
+		// mouse hover to more and click sales order
+		HomePage home = new HomePage(driver);
+		home.clickSalesOrderModule(driver);
+		
 		// verification
 		String salesOrderTitle = "Administrator - Sales Order - vtiger CRM 5 - Commercial Open Source CRM";
 		if (driver.getTitle().equals(salesOrderTitle)) {
@@ -83,45 +87,47 @@ public class CreateSalesOrderwithOpportunitiesTest {
 		}
 
 		// clicking on create sales order img
-		driver.findElement(By.xpath("//img[@title='Create Sales Order...']")).click();
+		SalesOrderPage salesOrder = new SalesOrderPage(driver);
+		salesOrder.clickCreateSalesOrderImage();
 
 		// entering values on subjectfield
+		CreateNewSalesOrderPage createNewSalesOder = new CreateNewSalesOrderPage(driver);
 		String subject = elib.getExcelData("salesOrder", 1, 0)+jlib.getRandonNumber(100);
-		driver.findElement(By.xpath("//input[@name='subject']")).sendKeys(subject);
-
+		createNewSalesOder.getSubjectField().sendKeys(subject);
+		
 		// clicking opportunity img
-		driver.findElement(By.xpath("//img[@tabindex='']")).click();
+		createNewSalesOder.getOpportunityNameImage().click();
 
 		// switching window
 		String parentId = driver.getWindowHandle();
 		wlib.switchToWindow("Potentials&action", driver);
 
 		// selecting opportunities
-		driver.findElement(By.xpath("//a[text()='AK Opportunity']")).click();
+		OpportunitiesNamePage opportunityName = new OpportunitiesNamePage(driver);
+		opportunityName.getOpportunityName(elib.getExcelData("opportunities", 1, 0));
 
 		// switching back to parent
 		driver.switchTo().window(parentId);
 
 		// selecting status
-		WebElement statusDropdown = driver.findElement(By.xpath("//select[@name='sostatus']"));
-		wlib.getAllTheOptionsFromDropdown(statusDropdown);
-		wlib.select(statusDropdown, elib.getExcelData("AllDropDown", 3, 4));
-
+		createNewSalesOder.selectStatusDropdown(elib.getExcelData("AllDropDown", 3, 4));
+		
 		// entering due date
-		driver.findElement(By.id("jscal_field_duedate")).sendKeys(elib.getExcelData("salesOrder", 1, 1));
+		createNewSalesOder.getDueDateField().sendKeys(elib.getExcelData("salesOrder", 1, 1));
 //		driver.findElement(By.xpath("//img[@id='jscal_trigger_duedate']")).click();
 //		WebElement date = driver.findElement(By.xpath("//td[contains(text(),'15')]"));
 //		date.click();
 		System.out.println("Due date selected sucessfully");
 
 		// clicking on organization img
-		driver.findElement(By.xpath("(//img[@src='themes/softed/images/select.gif'])[4]")).click();
+		createNewSalesOder.getOrganizationsNameImage().click();
 
 		// switching window organization
 		wlib.switchToWindow("Accounts&action", driver);
 
 		// clicking on organization name
-		driver.findElement(By.xpath("//a[text()='AK Enterprises']")).click();
+		OrganizationNamePage organizationName = new OrganizationNamePage(driver);
+		organizationName.getOrganizationName(elib.getExcelData("Organization", 2, 0));
 
 		// alert in accounts and actions
 		driver.switchTo().alert().accept();
@@ -130,41 +136,32 @@ public class CreateSalesOrderwithOpportunitiesTest {
 		driver.switchTo().window(parentId);
 
 		// selecting invoice status dropdown
-		WebElement invoiceStatusDropdown = driver.findElement(By.xpath("//select[@name='invoicestatus']"));
-		wlib.getAllTheOptionsFromDropdown(invoiceStatusDropdown);
-		wlib.select(invoiceStatusDropdown, elib.getExcelData("AllDropDown", 2, 3));
-
-		// scrolldown
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("arguments[0].scrollIntoView();",
-				driver.findElement(By.xpath("//b[text()='Address Information']")));
+		createNewSalesOder.selectInvoiceStatusDropdown(elib.getExcelData("AllDropDown", 2, 4));
 
 		// entering billing adddress
-		driver.findElement(By.xpath("//textarea[@name='bill_street']")).sendKeys(elib.getExcelData("salesOrder", 1, 2));
+		createNewSalesOder.getBillingAddressField().sendKeys(elib.getExcelData("salesOrder", 1, 2));
 
 		// entering shipping address
-		driver.findElement(By.xpath("//textarea[@name='ship_street']")).sendKeys(elib.getExcelData("salesOrder", 1, 3));
-
-		// scrolldown to item details
-		jse.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//b[text()='Item Details']")));
+		createNewSalesOder.getShippingAddressField().sendKeys(elib.getExcelData("salesOrder", 1, 3));
 
 		// clicking on select item img
-		driver.findElement(By.xpath("//img[@id='searchIcon1']")).click();
+		createNewSalesOder.getItemDetailsImage().click();
 
 		// switching the window to select product item
 		wlib.switchToWindow("Products&action", driver);
 
 		// clicking on product
-		driver.findElement(By.xpath("//a[text()='RK Product']")).click();
+		ProductNamePage productName = new ProductNamePage(driver);
+		productName.getProductName(elib.getExcelData("Product", 1, 0));
 
 		// switching back to parent
 		driver.switchTo().window(parentId);
 
 		// clicking on qty
-		driver.findElement(By.xpath("//input[@id='qty1']")).sendKeys("1");
+		createNewSalesOder.getQuantityField().sendKeys(elib.getExcelData("salesOrder", 1, 4));
 
 		// clicking on save
-		driver.findElement(By.xpath("(//input[@title='Save [Alt+S]'])[2]")).click();
+		createNewSalesOder.getSaveButton().click();
 
 		// verify sales order is created or not
 		String salesText = driver.findElement(By.xpath("//span[@class='lvtHeaderText']")).getText();
@@ -174,13 +171,9 @@ public class CreateSalesOrderwithOpportunitiesTest {
 			System.out.println("Sales order is not created, FAIL");
 		}
 
-		// mouse hover to administration link
-		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		wlib.mouseHoverOnElement(adminElement, driver);
-
-		// click on signout link
-		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
-
+		//signout
+		home.clickSignoutLink(driver);
+		
 		// close the browser
 		driver.close();
 

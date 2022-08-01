@@ -5,6 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.lexnod.ObjectRepository.CreateNewProductPage;
+import com.lexnod.ObjectRepository.CreateNewVendorPage;
+import com.lexnod.ObjectRepository.HomePage;
+import com.lexnod.ObjectRepository.LoginPage;
+import com.lexnod.ObjectRepository.ProductsPage;
+import com.lexnod.ObjectRepository.VendorsNamePage;
+import com.lexnod.ObjectRepository.VendorsPage;
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -57,20 +65,16 @@ public class CreateProductWithVendorAndVerifyTest {
 		}
 
 		// giving login details and clicking on login
-		driver.findElement(By.name("user_name")).sendKeys(plib.getPropertyData("username"));
-		driver.findElement(By.name("user_password")).sendKeys(plib.getPropertyData("password"));
-		driver.findElement(By.id("submitButton")).submit();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(plib.getPropertyData("username"), plib.getPropertyData("password"));
 
 		// VERIFICATION V-TIGER HOME PAGE IS DISPLAYED OR NOT
 		wlib.waitForPageTitle("Administrator", driver, 10);
 		System.out.println("VTiger Home page is displayed, PASS");
 		
 		//mouse hover to more
-		WebElement moreElement = driver.findElement(By.xpath("//a[text()='More']"));
-		wlib.mouseHoverOnElement(moreElement, driver);
-		
-		//click on vendors
-		driver.findElement(By.xpath("//a[text()='Vendors']")).click();
+		HomePage home = new HomePage(driver);
+		home.clickVendorsModule(driver);
 		
 		//verify vendors page is displayed or not
 		String vendorTitle = "Administrator - Vendors - vtiger CRM 5 - Commercial Open Source CRM";
@@ -83,14 +87,16 @@ public class CreateProductWithVendorAndVerifyTest {
 		}
 		
 		//clicking on create vendor img
-		driver.findElement(By.xpath("//img[@title='Create Vendor...']")).click();
+		VendorsPage vendorPage = new VendorsPage(driver);
+		vendorPage.clickCreateVendorImage();
 		
 		//enter value in vendor name
+		CreateNewVendorPage createNewVendor = new CreateNewVendorPage(driver);
 		String vendorName = elib.getExcelData("vendors", 1, 0);
-		driver.findElement(By.name("vendorname")).sendKeys(elib.getExcelData("vendors", 1, 0));
+		createNewVendor.getVendorNameField().sendKeys(vendorName);
 		
 		//click on save button
-		driver.findElement(By.xpath("(//input[@title='Save [Alt+S]'])[1]")).click();
+		createNewVendor.getSaveButton().click();
 		
 		//verifying vendor is created or not
 		String vendor=driver.findElement(By.xpath("//span[@class='lvtHeaderText']")).getText();
@@ -103,7 +109,7 @@ public class CreateProductWithVendorAndVerifyTest {
 		}
 		
 		//clicking on products module
-		driver.findElement(By.xpath("//a[@href='index.php?module=Products&action=index']")).click();
+		home.clickProductsModule();
 		
 		//verifying products page is displayed or not
 		String productsTitle = "Administrator - Products - vtiger CRM 5 - Commercial Open Source CRM";
@@ -116,31 +122,28 @@ public class CreateProductWithVendorAndVerifyTest {
 		}
 		
 		//clicking on create product img
-		driver.findElement(By.xpath("//img[@title='Create Product...']")).click();
+		ProductsPage productPage = new ProductsPage(driver);
+		productPage.clickCreateProductsButton();
 		
 		//entering details in product name tab
+		CreateNewProductPage createNewProduct = new CreateNewProductPage(driver);
 		String productName = elib.getExcelData("Product", 1, 0);
-		driver.findElement(By.name("productname")).sendKeys(productName);
+		createNewProduct.getProductNameField().sendKeys(productName);
 		
 		//selecting vendorname
-		driver.findElement(By.xpath("//img[@title='Select']")).click();
+		createNewProduct.getVendorNameImage().click();
 		String parentId = driver.getWindowHandle();
 		wlib.switchToWindow("Vendors&action", driver);
 		
 		//entering the vendor name
-		driver.findElement(By.id("search_txt")).sendKeys(vendorName);
-		
-		//click on search button
-		driver.findElement(By.name("search")).click();
-		
-		//select vendor name
-		driver.findElement(By.id("1")).click();
+		VendorsNamePage vendorNamePage = new VendorsNamePage(driver);
+		vendorNamePage.getVendorName(vendorName);
 		
 		//switch back to main window
 		driver.switchTo().window(parentId);
 		
 		//click on save button
-		driver.findElement(By.xpath("(//input[@title='Save [Alt+S]'])[1]")).click();
+		createNewProduct.getSaveButton().click();
 		
 		//verify whether product is created or not
 		String product = driver.findElement(By.xpath("//span[@class='lvtHeaderText']")).getText();
@@ -152,13 +155,9 @@ public class CreateProductWithVendorAndVerifyTest {
 			System.out.println("Product is not created, FAIL");
 		}
 		
-		// mouse hover to administration link
-		WebElement adminElement = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-		wlib.mouseHoverOnElement(adminElement, driver);
-
-		// click on signout link
-		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
-
+		//signout
+		home.clickSignoutLink(driver);
+		
 		// close the browser
 		driver.close();
 	}

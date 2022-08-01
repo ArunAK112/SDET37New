@@ -8,7 +8,7 @@ package com.lexnod.genericLib;
 public interface IAutoConstants {
 	
 	String PROP_PATH = "./src/test/resources/dataRepo/config.properties";
-	String EXCEL_PATH = "./src/test/resources/dataRepo/inputData.xlsx";
+	String EXCEL_PATH = "./src/test/resources/dataRepo/InputDataNew.xlsx";
 	String CHROME_KEY = "webdriver.chrome.driver";
 	String CHROME_VALUE ="./src/main/resources/drivers/chromedriver.exe";
 	String FIREFOX_KEY = "webdriver.gecko.driver";
