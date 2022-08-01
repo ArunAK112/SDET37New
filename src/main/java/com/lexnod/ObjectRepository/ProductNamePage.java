@@ -9,7 +9,7 @@ public class ProductNamePage {
 	
 	@FindBy(xpath = "//input[@id='search_txt']") private WebElement searchBox;
 	@FindBy(xpath = "//input[@name='search']") private WebElement searchNowButton;
-	@FindBy(id="popup_product_27") private WebElement selectFirstMatchingValue;
+	@FindBy(id="1") private WebElement selectFirstMatchingValue;
 	
 	public ProductNamePage(WebDriver driver)
 	{
