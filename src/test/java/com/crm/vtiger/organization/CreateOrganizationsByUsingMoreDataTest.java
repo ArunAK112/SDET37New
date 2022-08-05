@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import com.lexnod.ObjectRepository.CreateNewOrganizationPage;
 import com.lexnod.ObjectRepository.HomePage;
@@ -19,7 +20,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateOrganizationsByUsingMoreDataTest {
 
-	public static void main(String[] args) throws Throwable {
+	@Test
+	public void CreateOrganizationsByUsingMoreData() throws Throwable {
 
 		ExcelFileLibrary elib = new ExcelFileLibrary();
 		PropertyFileLibrary plib = new PropertyFileLibrary();

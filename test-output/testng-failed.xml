@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest">
+      <class name="dataProvider.FetchDataFromExcelTest">
         <methods>
-          <include name="createOrganizationAndContactAndVerify"/>
+          <include name="fetchDataFromExcel"/>
         </methods>
-      </class> <!-- com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest -->
+      </class> <!-- dataProvider.FetchDataFromExcelTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

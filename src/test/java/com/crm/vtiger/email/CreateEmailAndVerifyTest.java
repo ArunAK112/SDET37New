@@ -1,10 +1,9 @@
 package com.crm.vtiger.email;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import com.lexnod.ObjectRepository.ComposeEmailPage;
 import com.lexnod.ObjectRepository.ContactsNamePage;
@@ -20,7 +19,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateEmailAndVerifyTest {
 
-	public static void main(String[] args) throws Throwable {
+	@Test
+	public void CreateEmailAndVerify() throws Throwable {
 
 		ExcelFileLibrary elib = new ExcelFileLibrary();
 		PropertyFileLibrary plib = new PropertyFileLibrary();

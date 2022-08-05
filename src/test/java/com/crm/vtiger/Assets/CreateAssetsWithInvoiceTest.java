@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import com.lexnod.ObjectRepository.AssetsPage;
 import com.lexnod.ObjectRepository.CreateNewAssetPage;
@@ -26,7 +27,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 public class CreateAssetsWithInvoiceTest {
 
-	public static void main(String[] args) throws Throwable {
+	@Test
+	
+	public void CreateAssetsWithInvoice() throws Throwable {
 
 		ExcelFileLibrary elib = new ExcelFileLibrary();
 		PropertyFileLibrary plib = new PropertyFileLibrary();
@@ -144,7 +147,9 @@ public class CreateAssetsWithInvoiceTest {
 		home.clickSignoutLink(driver);
 
 		// close the browser
-		driver.close();
+		driver.quit();
+		
+		
 	}
 
 }

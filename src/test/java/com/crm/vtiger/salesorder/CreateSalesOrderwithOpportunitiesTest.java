@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 import com.lexnod.ObjectRepository.CreateNewSalesOrderPage;
 import com.lexnod.ObjectRepository.HomePage;
@@ -24,7 +25,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateSalesOrderwithOpportunitiesTest {
 
-	public static void main(String[] args) throws Throwable {
+	@Test
+	public void CreateSalesOrderwithOpportunities() throws Throwable {
 
 		ExcelFileLibrary elib = new ExcelFileLibrary();
 		PropertyFileLibrary plib = new PropertyFileLibrary();

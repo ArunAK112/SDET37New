@@ -25,7 +25,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateOrganization_ContactAndVerifyTest {
 
-	@Test
+	@Test(groups = "smokeTest")
 	public void createOrganizationAndContactAndVerify() throws Throwable {
 
 		ExcelFileLibrary elib = new ExcelFileLibrary();

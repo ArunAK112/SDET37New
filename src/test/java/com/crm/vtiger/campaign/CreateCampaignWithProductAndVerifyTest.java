@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import com.lexnod.ObjectRepository.CampaignsPage;
 import com.lexnod.ObjectRepository.CreateNewCampaignPage;
@@ -26,7 +27,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateCampaignWithProductAndVerifyTest {
 
-	public static void main(String[] args) throws Throwable {
+	@Test
+	
+	public void CreateCampaignWithProductAndVerify() throws Throwable {
 
 		ExcelFileLibrary elib = new ExcelFileLibrary();
 		PropertyFileLibrary plib = new PropertyFileLibrary();

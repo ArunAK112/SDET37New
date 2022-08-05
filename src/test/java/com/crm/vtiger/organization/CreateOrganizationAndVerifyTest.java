@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import com.lexnod.ObjectRepository.CreateNewOrganizationPage;
 import com.lexnod.ObjectRepository.HomePage;
@@ -18,8 +19,9 @@ import com.lexnod.genericLib.WebDriverCommonLibrary;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateOrganizationAndVerifyTest {
+	@Test
 
-	public static void main(String[] args) throws Throwable {
+	public void CreateOrganizationAndVerify() throws Throwable {
 
 		ExcelFileLibrary elib = new ExcelFileLibrary();
 		PropertyFileLibrary plib = new PropertyFileLibrary();
@@ -106,6 +108,7 @@ public class CreateOrganizationAndVerifyTest {
 
 		// close the browser
 		driver.close();
+		
 	}
 
 }

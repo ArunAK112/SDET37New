@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 import com.lexnod.ObjectRepository.CreateNewDocumentsPage;
 import com.lexnod.ObjectRepository.DocumentsPage;
@@ -21,7 +22,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateDocumentAndVerifyTest {
 
-	public static void main(String[] args) throws Throwable {
+	@Test
+	public void CreateDocumentAndVerify() throws Throwable {
 
 		ExcelFileLibrary elib = new ExcelFileLibrary();
 		PropertyFileLibrary plib = new PropertyFileLibrary();
