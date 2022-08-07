@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,8 +39,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ARUN\AppData\Local\Temp\testng-eclipse--1207540567\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>C:\Users\ARUN\VtigerCRM\SDET37\ParallelExecution.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
-                    <span>0 groups</span>
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -93,31 +93,125 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">20 methods, 4 failed,   16 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest" class="method navigator-link" hash-for-method="CreateContactWithMoreDataAndVerify">CreateContactWithMoreDataAndVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest" class="method navigator-link" hash-for-method="CreateInvoiceWithSalesAndOrganization">CreateInvoiceWithSalesAndOrganization</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest" class="method navigator-link" hash-for-method="CreateSalesOrderwithOpportunities">CreateSalesOrderwithOpportunities</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="scripts.CreateProjects" class="method navigator-link" hash-for-method="createProject">createProject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="dataProvider.FetchDataFromExcelTest" class="method navigator-link" hash-for-method="fetchDataFromExcel(bangalore, chennai, 500)">fetchDataFromExcel(bangalore, chennai, 500)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest" class="method navigator-link" hash-for-method="CreateAssetsWithInvoice">CreateAssetsWithInvoice</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="dataProvider.FetchDataFromExcelTest" class="method navigator-link" hash-for-method="fetchDataFromExcel(chennai, pondichery, 100)">fetchDataFromExcel(chennai, pondichery, 100)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest" class="method navigator-link" hash-for-method="CreateCampaignWithProductAndVerify">CreateCampaignWithProductAndVerify</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="dataProvider.FetchDataFromExcelTest" class="method navigator-link" hash-for-method="fetchDataFromExcel(pondichery, madurai, 1500)">fetchDataFromExcel(pondichery, madurai, 1500)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.contacts.CreateContactsAndVerifyTest" class="method navigator-link" hash-for-method="CreateContactsAndVerify">CreateContactsAndVerify</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.documents.CreateDocumentAndVerifyTest" class="method navigator-link" hash-for-method="CreateDocumentAndVerify">CreateDocumentAndVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.email.CreateEmailAndVerifyTest" class="method navigator-link" hash-for-method="CreateEmailAndVerify">CreateEmailAndVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest" class="method navigator-link" hash-for-method="CreateOpportunitiesWithContactAndVerify">CreateOpportunitiesWithContactAndVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.organization.CreateOrganizationAndVerifyTest" class="method navigator-link" hash-for-method="CreateOrganizationAndVerify">CreateOrganizationAndVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest" class="method navigator-link" hash-for-method="CreateOrganizationsByUsingMoreData">CreateOrganizationsByUsingMoreData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest" class="method navigator-link" hash-for-method="CreateProductWithVendorAndVerify">CreateProductWithVendorAndVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dataProvider.BookTicket" class="method navigator-link" hash-for-method="booking_Tickets(Bangalore, Mysore, 200)">booking_Tickets(Bangalore, Mysore, 200)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dataProvider.BookTicket" class="method navigator-link" hash-for-method="booking_Tickets(mysore, ooty, 150)">booking_Tickets(mysore, ooty, 150)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dataProvider.BookTicket" class="method navigator-link" hash-for-method="booking_Tickets(Bangalore, ooty, 300)">booking_Tickets(Bangalore, ooty, 300)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest" class="method navigator-link" hash-for-method="createOrganizationAndContactAndVerify">createOrganizationAndContactAndVerify</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dataProvider.FetchDataFromExcelTest" class="method navigator-link" hash-for-method="fetchDataFromExcel(chennai, pondichery, 100)">fetchDataFromExcel(chennai, pondichery, 100)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dataProvider.FetchDataFromExcelTest" class="method navigator-link" hash-for-method="fetchDataFromExcel(pondichery, madurai, 1500)">fetchDataFromExcel(pondichery, madurai, 1500)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dataProvider.FetchDataFromExcelTest" class="method navigator-link" hash-for-method="fetchDataFromExcel(bangalore, chennai, 500)">fetchDataFromExcel(bangalore, chennai, 500)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -128,21 +222,207 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateInvoiceWithSalesAndOrganization">
+                  </a> <!-- CreateInvoiceWithSalesAndOrganization -->
+                  <span class="method-name">CreateInvoiceWithSalesAndOrganization</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: The element reference of &lt;input class=&quot;crmbutton small create&quot; name=&quot;search&quot; type=&quot;button&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;LAPTOP-3AI9QJI2&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0237bf4a-3d07-45b0-afc0-e4cd16e0b574, clickElement {id=6d310409-6ad7-4374-a894-a3d88c56e2d2}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:60703, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11856, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60703/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (0237bf4a-3d07-45b0-afc0-e4cd16e0b574)] -&gt; xpath: //input[@name=&apos;search&apos;]]
+Session ID: 0237bf4a-3d07-45b0-afc0-e4cd16e0b574
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at com.lexnod.ObjectRepository.ProductNamePage.getProductName(ProductNamePage.java:23)
+	at com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest.CreateInvoiceWithSalesAndOrganization(CreateInvoiceWithSalesAndOrganizationTest.java:144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">scripts.CreateProjects</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createProject">
+                  </a> <!-- createProject -->
+                  <span class="method-name">createProject</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A8084/&amp;c=UTF-8&amp;d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8084.
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;LAPTOP-3AI9QJI2&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [79245886-9e21-4f4e-a242-c178d55d0e72, get {url=http://localhost:8084/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:50948, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10388, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50948/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 79245886-9e21-4f4e-a242-c178d55d0e72
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at scripts.CreateProjects.createProject(CreateProjects.java:25)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 17 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateSalesOrderwithOpportunities">
+                  </a> <!-- CreateSalesOrderwithOpportunities -->
+                  <span class="method-name">CreateSalesOrderwithOpportunities</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: The element reference of &lt;a id=&quot;1&quot; href=&quot;javascript:window.close();&quot;&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;LAPTOP-3AI9QJI2&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e7feb9eb-28f8-432b-871c-eff941fb693d, clickElement {id=6456c879-41ea-43fd-b08b-f83192309dc9}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:57423, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9580, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57423/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (e7feb9eb-28f8-432b-871c-eff941fb693d)] -&gt; id: 1]
+Session ID: e7feb9eb-28f8-432b-871c-eff941fb693d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at com.lexnod.ObjectRepository.OrganizationNamePage.getOrganizationName(OrganizationNamePage.java:23)
+	at com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest.CreateSalesOrderwithOpportunities(CreateSalesOrderwithOpportunitiesTest.java:132)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateContactWithMoreDataAndVerify">
+                  </a> <!-- CreateContactWithMoreDataAndVerify -->
+                  <span class="method-name">CreateContactWithMoreDataAndVerify</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: #\31 
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;LAPTOP-3AI9QJI2&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1168529f-f9d7-4c70-96cd-6bf8faed73cc, findElement {using=id, value=1}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:58913, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 7664, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58913/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1168529f-f9d7-4c70-96cd-6bf8faed73cc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at com.lexnod.ObjectRepository.OrganizationNamePage.getOrganizationName(OrganizationNamePage.java:23)
+	at com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest.CreateContactWithMoreDataAndVerify(CreateContactWithMoreDataAndVerifyTest.java:115)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 17 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.organization.CreateOrganizationAndVerifyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateOrganizationAndVerify">
+                  </a> <!-- CreateOrganizationAndVerify -->
+                  <span class="method-name">CreateOrganizationAndVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateCampaignWithProductAndVerify">
+                  </a> <!-- CreateCampaignWithProductAndVerify -->
+                  <span class="method-name">CreateCampaignWithProductAndVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">dataProvider.FetchDataFromExcelTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="fetchDataFromExcel(bangalore, chennai, 500)">
-                  </a> <!-- fetchDataFromExcel(bangalore, chennai, 500) -->
-                  <span class="method-name">fetchDataFromExcel</span>
-                  <span class="parameters">(bangalore, chennai, 500)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="fetchDataFromExcel(chennai, pondichery, 100)">
@@ -159,115 +439,503 @@
                   <span class="parameters">(pondichery, madurai, 1500)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fetchDataFromExcel(bangalore, chennai, 500)">
+                  </a> <!-- fetchDataFromExcel(bangalore, chennai, 500) -->
+                  <span class="method-name">fetchDataFromExcel</span>
+                  <span class="parameters">(bangalore, chennai, 500)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateOpportunitiesWithContactAndVerify">
+                  </a> <!-- CreateOpportunitiesWithContactAndVerify -->
+                  <span class="method-name">CreateOpportunitiesWithContactAndVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.email.CreateEmailAndVerifyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateEmailAndVerify">
+                  </a> <!-- CreateEmailAndVerify -->
+                  <span class="method-name">CreateEmailAndVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.contacts.CreateContactsAndVerifyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateContactsAndVerify">
+                  </a> <!-- CreateContactsAndVerify -->
+                  <span class="method-name">CreateContactsAndVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateProductWithVendorAndVerify">
+                  </a> <!-- CreateProductWithVendorAndVerify -->
+                  <span class="method-name">CreateProductWithVendorAndVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateOrganizationsByUsingMoreData">
+                  </a> <!-- CreateOrganizationsByUsingMoreData -->
+                  <span class="method-name">CreateOrganizationsByUsingMoreData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.documents.CreateDocumentAndVerifyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateDocumentAndVerify">
+                  </a> <!-- CreateDocumentAndVerify -->
+                  <span class="method-name">CreateDocumentAndVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOrganizationAndContactAndVerify">
+                  </a> <!-- createOrganizationAndContactAndVerify -->
+                  <span class="method-name">createOrganizationAndContactAndVerify</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateAssetsWithInvoice">
+                  </a> <!-- CreateAssetsWithInvoice -->
+                  <span class="method-name">CreateAssetsWithInvoice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dataProvider.BookTicket</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="booking_Tickets(Bangalore, Mysore, 200)">
+                  </a> <!-- booking_Tickets(Bangalore, Mysore, 200) -->
+                  <span class="method-name">booking_Tickets</span>
+                  <span class="parameters">(Bangalore, Mysore, 200)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="booking_Tickets(mysore, ooty, 150)">
+                  </a> <!-- booking_Tickets(mysore, ooty, 150) -->
+                  <span class="method-name">booking_Tickets</span>
+                  <span class="parameters">(mysore, ooty, 150)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="booking_Tickets(Bangalore, ooty, 300)">
+                  </a> <!-- booking_Tickets(Bangalore, ooty, 300) -->
+                  <span class="method-name">booking_Tickets</span>
+                  <span class="parameters">(Bangalore, ooty, 300)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ARUN\AppData\Local\Temp\testng-eclipse--1207540567\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ARUN\VtigerCRM\SDET37\ParallelExecution.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; parallel=&quot;classes&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;classes&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest&quot;/&gt;
       &lt;class name=&quot;dataProvider.FetchDataFromExcelTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.contacts.CreateContactsAndVerifyTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.documents.CreateDocumentAndVerifyTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest&quot;/&gt;
+      &lt;class name=&quot;scripts.CreateProjects&quot;/&gt;
+      &lt;class name=&quot;dataProvider.BookTicket&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.organization.CreateOrganizationAndVerifyTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.email.CreateEmailAndVerifyTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest&quot;/&gt;
+      &lt;class name=&quot;com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test (16 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">smokeTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateAssetsWithInvoice</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateCampaignWithProductAndVerify</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateContactsAndVerify</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateOrganizationAndVerify</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">createOrganizationAndContactAndVerify</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(20);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'fetchDataFromExcel')
-data.setCell(0, 2, 'dataProvider.FetchDataFromExcelTest')
-data.setCell(0, 3, 8);
+data.setCell(0, 1, 'createOrganizationAndContactAndVerify')
+data.setCell(0, 2, 'com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest')
+data.setCell(0, 3, 51105);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'fetchDataFromExcel')
-data.setCell(1, 2, 'dataProvider.FetchDataFromExcelTest')
-data.setCell(1, 3, 4);
+data.setCell(1, 1, 'CreateOrganizationsByUsingMoreData')
+data.setCell(1, 2, 'com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest')
+data.setCell(1, 3, 42610);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'fetchDataFromExcel')
-data.setCell(2, 2, 'dataProvider.FetchDataFromExcelTest')
-data.setCell(2, 3, 2);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(2, 1, 'CreateProductWithVendorAndVerify')
+data.setCell(2, 2, 'com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest')
+data.setCell(2, 3, 41873);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'CreateContactsAndVerify')
+data.setCell(3, 2, 'com.crm.vtiger.contacts.CreateContactsAndVerifyTest')
+data.setCell(3, 3, 36758);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'CreateOpportunitiesWithContactAndVerify')
+data.setCell(4, 2, 'com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest')
+data.setCell(4, 3, 35309);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'CreateDocumentAndVerify')
+data.setCell(5, 2, 'com.crm.vtiger.documents.CreateDocumentAndVerifyTest')
+data.setCell(5, 3, 33691);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'CreateInvoiceWithSalesAndOrganization')
+data.setCell(6, 2, 'com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest')
+data.setCell(6, 3, 31971);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'CreateOrganizationAndVerify')
+data.setCell(7, 2, 'com.crm.vtiger.organization.CreateOrganizationAndVerifyTest')
+data.setCell(7, 3, 31036);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'CreateContactWithMoreDataAndVerify')
+data.setCell(8, 2, 'com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest')
+data.setCell(8, 3, 30598);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'CreateEmailAndVerify')
+data.setCell(9, 2, 'com.crm.vtiger.email.CreateEmailAndVerifyTest')
+data.setCell(9, 3, 30194);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'CreateAssetsWithInvoice')
+data.setCell(10, 2, 'com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest')
+data.setCell(10, 3, 28873);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'CreateSalesOrderwithOpportunities')
+data.setCell(11, 2, 'com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest')
+data.setCell(11, 3, 23739);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'CreateCampaignWithProductAndVerify')
+data.setCell(12, 2, 'com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest')
+data.setCell(12, 3, 23574);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'createProject')
+data.setCell(13, 2, 'scripts.CreateProjects')
+data.setCell(13, 3, 12717);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'booking_Tickets')
+data.setCell(14, 2, 'dataProvider.BookTicket')
+data.setCell(14, 3, 14);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'fetchDataFromExcel')
+data.setCell(15, 2, 'dataProvider.FetchDataFromExcelTest')
+data.setCell(15, 3, 5);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'fetchDataFromExcel')
+data.setCell(16, 2, 'dataProvider.FetchDataFromExcelTest')
+data.setCell(16, 3, 3);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'booking_Tickets')
+data.setCell(17, 2, 'dataProvider.BookTicket')
+data.setCell(17, 3, 1);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'booking_Tickets')
+data.setCell(18, 2, 'dataProvider.BookTicket')
+data.setCell(18, 3, 1);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'fetchDataFromExcel')
+data.setCell(19, 2, 'dataProvider.FetchDataFromExcelTest')
+data.setCell(19, 3, 1);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 ms</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 7 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateOrganizationsByUsingMoreData</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.contacts.CreateContactsAndVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateContactsAndVerify</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">dataProvider.FetchDataFromExcelTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">fetchDataFromExcel(bangalore, chennai, 500)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">3461 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">fetchDataFromExcel(chennai, pondichery, 100)</span>
-                <span class="method-start">14 ms</span>
+                <span class="method-start">3465 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">fetchDataFromExcel(pondichery, madurai, 1500)</span>
-                <span class="method-start">18 ms</span>
+                <span class="method-start">3480 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.documents.CreateDocumentAndVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateDocumentAndVerify</span>
+                <span class="method-start">3501 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateAssetsWithInvoice</span>
+                <span class="method-start">36759 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CreateContactWithMoreDataAndVerify</span>
+                <span class="method-start">37192 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">scripts.CreateProjects</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createProject</span>
+                <span class="method-start">42611 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dataProvider.BookTicket</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">booking_Tickets(Bangalore, Mysore, 200)</span>
+                <span class="method-start">55348 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">booking_Tickets(Bangalore, ooty, 300)</span>
+                <span class="method-start">55355 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">booking_Tickets(mysore, ooty, 150)</span>
+                <span class="method-start">55356 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CreateSalesOrderwithOpportunities</span>
+                <span class="method-start">55374 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateProductWithVendorAndVerify</span>
+                <span class="method-start">65635 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateOpportunitiesWithContactAndVerify</span>
+                <span class="method-start">67792 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CreateInvoiceWithSalesAndOrganization</span>
+                <span class="method-start">79117 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.organization.CreateOrganizationAndVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateOrganizationAndVerify</span>
+                <span class="method-start">103103 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.email.CreateEmailAndVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateEmailAndVerify</span>
+                <span class="method-start">107509 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">createOrganizationAndContactAndVerify</span>
+                <span class="method-start">111089 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CreateCampaignWithProductAndVerify</span>
+                <span class="method-start">134140 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

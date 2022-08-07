@@ -1,13 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="20" passed="16" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-05T15:00:29 IST" name="Default suite" finished-at="2022-08-05T15:00:30 IST" duration-ms="1565">
+  <suite started-at="2022-08-07T19:34:06 IST" name="Suite" finished-at="2022-08-07T19:36:49 IST" duration-ms="162231">
     <groups>
+      <group name="smokeTest">
+        <method signature="CreateAssetsWithInvoiceTest.CreateAssetsWithInvoice()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@54c5a2ff]" name="CreateAssetsWithInvoice" class="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest"/>
+        <method signature="CreateCampaignWithProductAndVerifyTest.CreateCampaignWithProductAndVerify()[pri:0, instance:com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest@6e9175d8]" name="CreateCampaignWithProductAndVerify" class="com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest"/>
+        <method signature="CreateContactsAndVerifyTest.CreateContactsAndVerify()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@7526515b]" name="CreateContactsAndVerify" class="com.crm.vtiger.contacts.CreateContactsAndVerifyTest"/>
+        <method signature="CreateOrganizationAndVerifyTest.CreateOrganizationAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@1530c739]" name="CreateOrganizationAndVerify" class="com.crm.vtiger.organization.CreateOrganizationAndVerifyTest"/>
+        <method signature="CreateOrganization_ContactAndVerifyTest.createOrganizationAndContactAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@78e4deb0]" name="createOrganizationAndContactAndVerify" class="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest"/>
+      </group> <!-- smokeTest -->
     </groups>
-    <test started-at="2022-08-05T15:00:29 IST" name="Default test" finished-at="2022-08-05T15:00:30 IST" duration-ms="1565">
+    <test started-at="2022-08-07T19:34:06 IST" name="Test" finished-at="2022-08-07T19:36:49 IST" duration-ms="162231">
+      <class name="com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest">
+        <test-method signature="CreateInvoiceWithSalesAndOrganization()[pri:0, instance:com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest@449a4f23]" started-at="2022-08-07T19:35:26 IST" name="CreateInvoiceWithSalesAndOrganization" finished-at="2022-08-07T19:35:58 IST" duration-ms="31971" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[The element reference of <input class="crmbutton small create" name="search" type="button"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0237bf4a-3d07-45b0-afc0-e4cd16e0b574, clickElement {id=6d310409-6ad7-4374-a894-a3d88c56e2d2}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:60703, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11856, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60703/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (0237bf4a-3d07-45b0-afc0-e4cd16e0b574)] -> xpath: //input[@name='search']]
+Session ID: 0237bf4a-3d07-45b0-afc0-e4cd16e0b574]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: The element reference of <input class="crmbutton small create" name="search" type="button"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0237bf4a-3d07-45b0-afc0-e4cd16e0b574, clickElement {id=6d310409-6ad7-4374-a894-a3d88c56e2d2}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:60703, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11856, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60703/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (0237bf4a-3d07-45b0-afc0-e4cd16e0b574)] -> xpath: //input[@name='search']]
+Session ID: 0237bf4a-3d07-45b0-afc0-e4cd16e0b574
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at com.lexnod.ObjectRepository.ProductNamePage.getProductName(ProductNamePage.java:23)
+at com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest.CreateInvoiceWithSalesAndOrganization(CreateInvoiceWithSalesAndOrganizationTest.java:144)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateInvoiceWithSalesAndOrganization -->
+      </class> <!-- com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest -->
+      <class name="com.crm.vtiger.email.CreateEmailAndVerifyTest">
+        <test-method signature="CreateEmailAndVerify()[pri:0, instance:com.crm.vtiger.email.CreateEmailAndVerifyTest@5b1669c0]" started-at="2022-08-07T19:35:54 IST" name="CreateEmailAndVerify" finished-at="2022-08-07T19:36:24 IST" duration-ms="30194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateEmailAndVerify -->
+      </class> <!-- com.crm.vtiger.email.CreateEmailAndVerifyTest -->
+      <class name="com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest">
+        <test-method signature="CreateProductWithVendorAndVerify()[pri:0, instance:com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest@2e8c1c9b]" started-at="2022-08-07T19:35:12 IST" name="CreateProductWithVendorAndVerify" finished-at="2022-08-07T19:35:54 IST" duration-ms="41873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateProductWithVendorAndVerify -->
+      </class> <!-- com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest -->
+      <class name="com.crm.vtiger.organization.CreateOrganizationAndVerifyTest">
+        <test-method signature="CreateOrganizationAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@1530c739]" started-at="2022-08-07T19:35:50 IST" name="CreateOrganizationAndVerify" finished-at="2022-08-07T19:36:21 IST" duration-ms="31036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateOrganizationAndVerify -->
+      </class> <!-- com.crm.vtiger.organization.CreateOrganizationAndVerifyTest -->
+      <class name="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest">
+        <test-method signature="CreateAssetsWithInvoice()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@54c5a2ff]" started-at="2022-08-07T19:34:43 IST" name="CreateAssetsWithInvoice" finished-at="2022-08-07T19:35:12 IST" duration-ms="28873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateAssetsWithInvoice -->
+      </class> <!-- com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest -->
       <class name="dataProvider.FetchDataFromExcelTest">
-        <test-method signature="fetchDataFromExcel(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:dataProvider.FetchDataFromExcelTest@4dbb42b7]" started-at="2022-08-05T15:00:30 IST" name="fetchDataFromExcel" data-provider="fetchDataFromExcel" finished-at="2022-08-05T15:00:30 IST" duration-ms="8" status="PASS">
+        <test-method signature="fetchDataFromExcel(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:dataProvider.FetchDataFromExcelTest@644baf4a]" started-at="2022-08-07T19:34:10 IST" name="fetchDataFromExcel" data-provider="fetchDataFromExcel" finished-at="2022-08-07T19:34:10 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,7 +126,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchDataFromExcel -->
-        <test-method signature="fetchDataFromExcel(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:dataProvider.FetchDataFromExcelTest@4dbb42b7]" started-at="2022-08-05T15:00:30 IST" name="fetchDataFromExcel" data-provider="fetchDataFromExcel" finished-at="2022-08-05T15:00:30 IST" duration-ms="2" status="PASS">
+        <test-method signature="fetchDataFromExcel(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:dataProvider.FetchDataFromExcelTest@644baf4a]" started-at="2022-08-07T19:34:10 IST" name="fetchDataFromExcel" data-provider="fetchDataFromExcel" finished-at="2022-08-07T19:34:10 IST" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,7 +147,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchDataFromExcel -->
-        <test-method signature="fetchDataFromExcel(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:dataProvider.FetchDataFromExcelTest@4dbb42b7]" started-at="2022-08-05T15:00:30 IST" name="fetchDataFromExcel" data-provider="fetchDataFromExcel" finished-at="2022-08-05T15:00:30 IST" duration-ms="4" status="PASS">
+        <test-method signature="fetchDataFromExcel(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:dataProvider.FetchDataFromExcelTest@644baf4a]" started-at="2022-08-07T19:34:10 IST" name="fetchDataFromExcel" data-provider="fetchDataFromExcel" finished-at="2022-08-07T19:34:10 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,6 +169,295 @@
           </reporter-output>
         </test-method> <!-- fetchDataFromExcel -->
       </class> <!-- dataProvider.FetchDataFromExcelTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest">
+        <test-method signature="CreateCampaignWithProductAndVerify()[pri:0, instance:com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest@6e9175d8]" started-at="2022-08-07T19:36:21 IST" name="CreateCampaignWithProductAndVerify" finished-at="2022-08-07T19:36:44 IST" duration-ms="23574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateCampaignWithProductAndVerify -->
+      </class> <!-- com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest -->
+      <class name="com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest">
+        <test-method signature="CreateOrganizationsByUsingMoreData()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest@6340e5f0]" started-at="2022-08-07T19:34:06 IST" name="CreateOrganizationsByUsingMoreData" finished-at="2022-08-07T19:34:49 IST" duration-ms="42610" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateOrganizationsByUsingMoreData -->
+      </class> <!-- com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest -->
+      <class name="com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest">
+        <test-method signature="CreateOpportunitiesWithContactAndVerify()[pri:0, instance:com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest@53fe15ff]" started-at="2022-08-07T19:35:14 IST" name="CreateOpportunitiesWithContactAndVerify" finished-at="2022-08-07T19:35:50 IST" duration-ms="35309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateOpportunitiesWithContactAndVerify -->
+      </class> <!-- com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest -->
+      <class name="com.crm.vtiger.documents.CreateDocumentAndVerifyTest">
+        <test-method signature="CreateDocumentAndVerify()[pri:0, instance:com.crm.vtiger.documents.CreateDocumentAndVerifyTest@1ed4ae0f]" started-at="2022-08-07T19:34:10 IST" name="CreateDocumentAndVerify" finished-at="2022-08-07T19:34:44 IST" duration-ms="33691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateDocumentAndVerify -->
+      </class> <!-- com.crm.vtiger.documents.CreateDocumentAndVerifyTest -->
+      <class name="com.crm.vtiger.contacts.CreateContactsAndVerifyTest">
+        <test-method signature="CreateContactsAndVerify()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@7526515b]" started-at="2022-08-07T19:34:06 IST" name="CreateContactsAndVerify" finished-at="2022-08-07T19:34:43 IST" duration-ms="36758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateContactsAndVerify -->
+      </class> <!-- com.crm.vtiger.contacts.CreateContactsAndVerifyTest -->
+      <class name="com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest">
+        <test-method signature="CreateSalesOrderwithOpportunities()[pri:0, instance:com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest@76a4ebf2]" started-at="2022-08-07T19:35:02 IST" name="CreateSalesOrderwithOpportunities" finished-at="2022-08-07T19:35:26 IST" duration-ms="23739" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[The element reference of <a id="1" href="javascript:window.close();"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e7feb9eb-28f8-432b-871c-eff941fb693d, clickElement {id=6456c879-41ea-43fd-b08b-f83192309dc9}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:57423, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9580, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57423/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (e7feb9eb-28f8-432b-871c-eff941fb693d)] -> id: 1]
+Session ID: e7feb9eb-28f8-432b-871c-eff941fb693d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: The element reference of <a id="1" href="javascript:window.close();"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e7feb9eb-28f8-432b-871c-eff941fb693d, clickElement {id=6456c879-41ea-43fd-b08b-f83192309dc9}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:57423, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9580, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57423/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (e7feb9eb-28f8-432b-871c-eff941fb693d)] -> id: 1]
+Session ID: e7feb9eb-28f8-432b-871c-eff941fb693d
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at com.lexnod.ObjectRepository.OrganizationNamePage.getOrganizationName(OrganizationNamePage.java:23)
+at com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest.CreateSalesOrderwithOpportunities(CreateSalesOrderwithOpportunitiesTest.java:132)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateSalesOrderwithOpportunities -->
+      </class> <!-- com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest -->
+      <class name="scripts.CreateProjects">
+        <test-method signature="createProject()[pri:0, instance:scripts.CreateProjects@2a265ea9]" started-at="2022-08-07T19:34:49 IST" name="createProject" finished-at="2022-08-07T19:35:02 IST" duration-ms="12717" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Reached error page: about:neterror?e=connectionFailure&u=http%3A//localhost%3A8084/&c=UTF-8&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8084.
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [79245886-9e21-4f4e-a242-c178d55d0e72, get {url=http://localhost:8084/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:50948, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10388, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50948/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 79245886-9e21-4f4e-a242-c178d55d0e72]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=connectionFailure&u=http%3A//localhost%3A8084/&c=UTF-8&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8084.
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [79245886-9e21-4f4e-a242-c178d55d0e72, get {url=http://localhost:8084/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:50948, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10388, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50948/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 79245886-9e21-4f4e-a242-c178d55d0e72
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+at scripts.CreateProjects.createProject(CreateProjects.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProject -->
+      </class> <!-- scripts.CreateProjects -->
+      <class name="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest">
+        <test-method signature="createOrganizationAndContactAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@78e4deb0]" started-at="2022-08-07T19:35:58 IST" name="createOrganizationAndContactAndVerify" finished-at="2022-08-07T19:36:49 IST" duration-ms="51105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrganizationAndContactAndVerify -->
+      </class> <!-- com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest -->
+      <class name="dataProvider.BookTicket">
+        <test-method signature="booking_Tickets(java.lang.String,java.lang.String,int)[pri:0, instance:dataProvider.BookTicket@6e6f2380]" started-at="2022-08-07T19:35:02 IST" name="booking_Tickets" data-provider="bookingTheTickets" finished-at="2022-08-07T19:35:02 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mysore]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- booking_Tickets -->
+        <test-method signature="booking_Tickets(java.lang.String,java.lang.String,int)[pri:0, instance:dataProvider.BookTicket@6e6f2380]" started-at="2022-08-07T19:35:02 IST" name="booking_Tickets" data-provider="bookingTheTickets" finished-at="2022-08-07T19:35:02 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ooty]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[300]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- booking_Tickets -->
+        <test-method signature="booking_Tickets(java.lang.String,java.lang.String,int)[pri:0, instance:dataProvider.BookTicket@6e6f2380]" started-at="2022-08-07T19:35:02 IST" name="booking_Tickets" data-provider="bookingTheTickets" finished-at="2022-08-07T19:35:02 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mysore]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ooty]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[150]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- booking_Tickets -->
+      </class> <!-- dataProvider.BookTicket -->
+      <class name="com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest">
+        <test-method signature="CreateContactWithMoreDataAndVerify()[pri:0, instance:com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest@6d4d66d2]" started-at="2022-08-07T19:34:44 IST" name="CreateContactWithMoreDataAndVerify" finished-at="2022-08-07T19:35:14 IST" duration-ms="30598" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: #\31 
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1168529f-f9d7-4c70-96cd-6bf8faed73cc, findElement {using=id, value=1}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:58913, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 7664, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58913/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1168529f-f9d7-4c70-96cd-6bf8faed73cc]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #\31 
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1168529f-f9d7-4c70-96cd-6bf8faed73cc, findElement {using=id, value=1}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:58913, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 7664, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58913/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1168529f-f9d7-4c70-96cd-6bf8faed73cc
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at com.lexnod.ObjectRepository.OrganizationNamePage.getOrganizationName(OrganizationNamePage.java:23)
+at com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest.CreateContactWithMoreDataAndVerify(CreateContactWithMoreDataAndVerifyTest.java:115)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateContactWithMoreDataAndVerify -->
+      </class> <!-- com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

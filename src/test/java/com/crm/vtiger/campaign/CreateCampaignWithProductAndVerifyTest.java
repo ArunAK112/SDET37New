@@ -27,7 +27,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateCampaignWithProductAndVerifyTest {
 
-	@Test
+	@Test(groups = "smokeTest")
 	
 	public void CreateCampaignWithProductAndVerify() throws Throwable {
 

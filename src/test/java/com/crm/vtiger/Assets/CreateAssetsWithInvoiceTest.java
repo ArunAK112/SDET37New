@@ -27,7 +27,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 public class CreateAssetsWithInvoiceTest {
 
-	@Test
+	@Test(groups = "smokeTest")
 	
 	public void CreateAssetsWithInvoice() throws Throwable {
 

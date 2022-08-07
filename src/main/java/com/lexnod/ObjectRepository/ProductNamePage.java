@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProductNamePage {
 	
-	@FindBy(xpath = "//input[@id='search_txt']") private WebElement searchBox;
+	@FindBy(id="search_txt") private WebElement searchBox;
 	@FindBy(xpath = "//input[@name='search']") private WebElement searchNowButton;
 	@FindBy(id="1") private WebElement selectFirstMatchingValue;
 	

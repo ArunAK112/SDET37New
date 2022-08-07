@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="2">
+  <test name="Firefox-Browser">
+  	<parameter name = "Browser" value="firefox"> </parameter>
+    <classes>
+      <class name="com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest"/>
+      <class name="dataProvider.FetchDataFromExcelTest"/>
+      <class name="com.crm.vtiger.contacts.CreateContactsAndVerifyTest"/>
+      <class name="com.crm.vtiger.documents.CreateDocumentAndVerifyTest"/>
+      <class name="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest"/>
+      <class name="com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest"/>
+      <class name="scripts.CreateProjects"/>
+      <class name="dataProvider.BookTicket"/>
+      <class name="com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest"/>
+      <class name="com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest"/>
+      <class name="com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest"/>
+      <class name="com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest"/>
+      <class name="com.crm.vtiger.organization.CreateOrganizationAndVerifyTest"/>
+      <class name="com.crm.vtiger.email.CreateEmailAndVerifyTest"/>
+      <class name="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest"/>
+      <class name="com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest"/>
+    </classes>
+  </test> 
+  <test name="Chrome-Browser">
+  	<parameter name = "Browser" value="chrome"> </parameter>
+    <classes>
+      <class name="com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest"/>
+      <class name="dataProvider.FetchDataFromExcelTest"/>
+      <class name="com.crm.vtiger.contacts.CreateContactsAndVerifyTest"/>
+      <class name="com.crm.vtiger.documents.CreateDocumentAndVerifyTest"/>
+      <class name="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest"/>
+      <class name="com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest"/>
+      <class name="scripts.CreateProjects"/>
+      <class name="dataProvider.BookTicket"/>
+      <class name="com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest"/>
+      <class name="com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest"/>
+      <class name="com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest"/>
+      <class name="com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest"/>
+      <class name="com.crm.vtiger.organization.CreateOrganizationAndVerifyTest"/>
+      <class name="com.crm.vtiger.email.CreateEmailAndVerifyTest"/>
+      <class name="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest"/>
+      <class name="com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest"/>
+    </classes>
+  </test> 
+</suite> 

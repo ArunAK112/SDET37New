@@ -28,7 +28,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 public class CreateContactsAndVerifyTest implements IAutoConstants {
 
-	@Test
+	@Test(groups = "smokeTest")
 	public void CreateContactsAndVerify() throws Throwable {
 
 		ExcelFileLibrary elib = new ExcelFileLibrary();

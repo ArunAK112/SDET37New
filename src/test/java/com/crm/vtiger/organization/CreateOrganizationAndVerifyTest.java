@@ -19,7 +19,7 @@ import com.lexnod.genericLib.WebDriverCommonLibrary;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateOrganizationAndVerifyTest {
-	@Test
+	@Test(groups = "smokeTest")
 
 	public void CreateOrganizationAndVerify() throws Throwable {
 
