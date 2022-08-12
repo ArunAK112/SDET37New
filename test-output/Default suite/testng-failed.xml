@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="dataProvider.FetchDataFromExcelTest">
+      <class name="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest">
         <methods>
-          <include name="fetchDataFromExcel"/>
+          <include name="CreateAssetsWithInvoice"/>
+          <include name="logoutFromAppln"/>
+          <include name="loginToAppln"/>
+          <include name="closeTheBrowser"/>
+          <include name="launchTheBrowser"/>
         </methods>
-      </class> <!-- dataProvider.FetchDataFromExcelTest -->
+      </class> <!-- com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

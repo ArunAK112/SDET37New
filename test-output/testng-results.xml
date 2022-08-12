@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="20" passed="16" failed="4" skipped="0">
+<testng-results ignored="0" total="13" passed="4" failed="8" skipped="1">
   <reporter-output>
+    <line>
+      <![CDATA[Document page is displayed, PASS]]>
+    </line>
+    <line>
+      <![CDATA[Contacts page is displayed, PASS]]>
+    </line>
+    <line>
+      <![CDATA[Organization page is displayed, PASS]]>
+    </line>
+    <line>
+      <![CDATA[Document is created, PASS]]>
+    </line>
+    <line>
+      <![CDATA[Contact is created, PASS]]>
+    </line>
+    <line>
+      <![CDATA[VTiger Login Page is Displayed, PASS]]>
+    </line>
+    <line>
+      <![CDATA[Campaign page is displayed, PASS]]>
+    </line>
+    <line>
+      <![CDATA[Organization page is displayed, PASS]]>
+    </line>
+    <line>
+      <![CDATA[Campaign is created, PASS]]>
+    </line>
+    <line>
+      <![CDATA[Organization name created, TRUE]]>
+    </line>
   </reporter-output>
-  <suite started-at="2022-08-07T19:34:06 IST" name="Suite" finished-at="2022-08-07T19:36:49 IST" duration-ms="162231">
+  <suite started-at="2022-08-12T15:24:50 IST" name="Suite" finished-at="2022-08-12T15:26:40 IST" duration-ms="110083">
     <groups>
       <group name="smokeTest">
-        <method signature="CreateAssetsWithInvoiceTest.CreateAssetsWithInvoice()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@54c5a2ff]" name="CreateAssetsWithInvoice" class="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest"/>
-        <method signature="CreateCampaignWithProductAndVerifyTest.CreateCampaignWithProductAndVerify()[pri:0, instance:com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest@6e9175d8]" name="CreateCampaignWithProductAndVerify" class="com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest"/>
-        <method signature="CreateContactsAndVerifyTest.CreateContactsAndVerify()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@7526515b]" name="CreateContactsAndVerify" class="com.crm.vtiger.contacts.CreateContactsAndVerifyTest"/>
-        <method signature="CreateOrganizationAndVerifyTest.CreateOrganizationAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@1530c739]" name="CreateOrganizationAndVerify" class="com.crm.vtiger.organization.CreateOrganizationAndVerifyTest"/>
-        <method signature="CreateOrganization_ContactAndVerifyTest.createOrganizationAndContactAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@78e4deb0]" name="createOrganizationAndContactAndVerify" class="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest"/>
+        <method signature="CreateAssetsWithInvoiceTest.CreateAssetsWithInvoice()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@795509d9]" name="CreateAssetsWithInvoice" class="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest"/>
+        <method signature="CreateCampaignWithProductAndVerifyTest.CreateCampaignWithProductAndVerify()[pri:0, instance:com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest@712625fd]" name="CreateCampaignWithProductAndVerify" class="com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest"/>
+        <method signature="CreateContactsAndVerifyTest.CreateContactsAndVerify()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@663c9e7a]" name="CreateContactsAndVerify" class="com.crm.vtiger.contacts.CreateContactsAndVerifyTest"/>
+        <method signature="CreateOrganizationAndVerifyTest.CreateOrganizationAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@53fb3dab]" name="CreateOrganizationAndVerify" class="com.crm.vtiger.organization.CreateOrganizationAndVerifyTest"/>
+        <method signature="CreateOrganization_ContactAndVerifyTest.createOrganizationAndContactAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@33065d67]" name="createOrganizationAndContactAndVerify" class="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest"/>
       </group> <!-- smokeTest -->
     </groups>
-    <test started-at="2022-08-07T19:34:06 IST" name="Test" finished-at="2022-08-07T19:36:49 IST" duration-ms="162231">
+    <test started-at="2022-08-12T15:24:50 IST" name="Test" finished-at="2022-08-12T15:26:40 IST" duration-ms="110083">
       <class name="com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest">
-        <test-method signature="CreateInvoiceWithSalesAndOrganization()[pri:0, instance:com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest@449a4f23]" started-at="2022-08-07T19:35:26 IST" name="CreateInvoiceWithSalesAndOrganization" finished-at="2022-08-07T19:35:58 IST" duration-ms="31971" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest@4b013c76]" started-at="2022-08-12T15:25:39 IST" name="launchTheBrowser" finished-at="2022-08-12T15:25:47 IST" duration-ms="8170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest@4b013c76]" started-at="2022-08-12T15:25:47 IST" name="loginToAppln" finished-at="2022-08-12T15:25:52 IST" duration-ms="5405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateInvoiceWithSalesAndOrganization()[pri:0, instance:com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest@4b013c76]" started-at="2022-08-12T15:25:52 IST" name="CreateInvoiceWithSalesAndOrganization" finished-at="2022-08-12T15:25:58 IST" duration-ms="5736" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The element reference of <input class="crmbutton small create" name="search" type="button"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [0237bf4a-3d07-45b0-afc0-e4cd16e0b574, clickElement {id=6d310409-6ad7-4374-a894-a3d88c56e2d2}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:60703, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11856, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60703/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on WINDOWS (0237bf4a-3d07-45b0-afc0-e4cd16e0b574)] -> xpath: //input[@name='search']]
-Session ID: 0237bf4a-3d07-45b0-afc0-e4cd16e0b574]]>
+              <![CDATA[Invoice page is not displayed, FAIL expected [Administrator - Invoice - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: The element reference of <input class="crmbutton small create" name="search" type="button"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [0237bf4a-3d07-45b0-afc0-e4cd16e0b574, clickElement {id=6d310409-6ad7-4374-a894-a3d88c56e2d2}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:60703, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11856, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60703/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on WINDOWS (0237bf4a-3d07-45b0-afc0-e4cd16e0b574)] -> xpath: //input[@name='search']]
-Session ID: 0237bf4a-3d07-45b0-afc0-e4cd16e0b574
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at com.lexnod.ObjectRepository.ProductNamePage.getProductName(ProductNamePage.java:23)
-at com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest.CreateInvoiceWithSalesAndOrganization(CreateInvoiceWithSalesAndOrganizationTest.java:144)
+              <![CDATA[java.lang.AssertionError: Invoice page is not displayed, FAIL expected [Administrator - Invoice - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest.CreateInvoiceWithSalesAndOrganization(CreateInvoiceWithSalesAndOrganizationTest.java:42)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -75,175 +82,41 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:831)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateInvoiceWithSalesAndOrganization -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest@4b013c76]" started-at="2022-08-12T15:25:58 IST" name="logoutFromAppln" finished-at="2022-08-12T15:26:02 IST" duration-ms="3343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest@4b013c76]" started-at="2022-08-12T15:26:02 IST" name="closeTheBrowser" finished-at="2022-08-12T15:26:15 IST" duration-ms="13748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
       </class> <!-- com.crm.vtiger.Invoice.CreateInvoiceWithSalesAndOrganizationTest -->
       <class name="com.crm.vtiger.email.CreateEmailAndVerifyTest">
-        <test-method signature="CreateEmailAndVerify()[pri:0, instance:com.crm.vtiger.email.CreateEmailAndVerifyTest@5b1669c0]" started-at="2022-08-07T19:35:54 IST" name="CreateEmailAndVerify" finished-at="2022-08-07T19:36:24 IST" duration-ms="30194" status="PASS">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.email.CreateEmailAndVerifyTest@cb0755b]" started-at="2022-08-12T15:25:56 IST" name="launchTheBrowser" finished-at="2022-08-12T15:26:05 IST" duration-ms="8917" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateEmailAndVerify -->
-      </class> <!-- com.crm.vtiger.email.CreateEmailAndVerifyTest -->
-      <class name="com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest">
-        <test-method signature="CreateProductWithVendorAndVerify()[pri:0, instance:com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest@2e8c1c9b]" started-at="2022-08-07T19:35:12 IST" name="CreateProductWithVendorAndVerify" finished-at="2022-08-07T19:35:54 IST" duration-ms="41873" status="PASS">
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.email.CreateEmailAndVerifyTest@cb0755b]" started-at="2022-08-12T15:26:05 IST" name="loginToAppln" finished-at="2022-08-12T15:26:08 IST" duration-ms="3461" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateProductWithVendorAndVerify -->
-      </class> <!-- com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest -->
-      <class name="com.crm.vtiger.organization.CreateOrganizationAndVerifyTest">
-        <test-method signature="CreateOrganizationAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@1530c739]" started-at="2022-08-07T19:35:50 IST" name="CreateOrganizationAndVerify" finished-at="2022-08-07T19:36:21 IST" duration-ms="31036" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateOrganizationAndVerify -->
-      </class> <!-- com.crm.vtiger.organization.CreateOrganizationAndVerifyTest -->
-      <class name="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest">
-        <test-method signature="CreateAssetsWithInvoice()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@54c5a2ff]" started-at="2022-08-07T19:34:43 IST" name="CreateAssetsWithInvoice" finished-at="2022-08-07T19:35:12 IST" duration-ms="28873" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateAssetsWithInvoice -->
-      </class> <!-- com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest -->
-      <class name="dataProvider.FetchDataFromExcelTest">
-        <test-method signature="fetchDataFromExcel(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:dataProvider.FetchDataFromExcelTest@644baf4a]" started-at="2022-08-07T19:34:10 IST" name="fetchDataFromExcel" data-provider="fetchDataFromExcel" finished-at="2022-08-07T19:34:10 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[bangalore]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[chennai]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[500]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fetchDataFromExcel -->
-        <test-method signature="fetchDataFromExcel(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:dataProvider.FetchDataFromExcelTest@644baf4a]" started-at="2022-08-07T19:34:10 IST" name="fetchDataFromExcel" data-provider="fetchDataFromExcel" finished-at="2022-08-07T19:34:10 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chennai]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[pondichery]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[100]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fetchDataFromExcel -->
-        <test-method signature="fetchDataFromExcel(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:dataProvider.FetchDataFromExcelTest@644baf4a]" started-at="2022-08-07T19:34:10 IST" name="fetchDataFromExcel" data-provider="fetchDataFromExcel" finished-at="2022-08-07T19:34:10 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[pondichery]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[madurai]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[1500]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fetchDataFromExcel -->
-      </class> <!-- dataProvider.FetchDataFromExcelTest -->
-      <class name="com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest">
-        <test-method signature="CreateCampaignWithProductAndVerify()[pri:0, instance:com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest@6e9175d8]" started-at="2022-08-07T19:36:21 IST" name="CreateCampaignWithProductAndVerify" finished-at="2022-08-07T19:36:44 IST" duration-ms="23574" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateCampaignWithProductAndVerify -->
-      </class> <!-- com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest -->
-      <class name="com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest">
-        <test-method signature="CreateOrganizationsByUsingMoreData()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest@6340e5f0]" started-at="2022-08-07T19:34:06 IST" name="CreateOrganizationsByUsingMoreData" finished-at="2022-08-07T19:34:49 IST" duration-ms="42610" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateOrganizationsByUsingMoreData -->
-      </class> <!-- com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest -->
-      <class name="com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest">
-        <test-method signature="CreateOpportunitiesWithContactAndVerify()[pri:0, instance:com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest@53fe15ff]" started-at="2022-08-07T19:35:14 IST" name="CreateOpportunitiesWithContactAndVerify" finished-at="2022-08-07T19:35:50 IST" duration-ms="35309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateOpportunitiesWithContactAndVerify -->
-      </class> <!-- com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest -->
-      <class name="com.crm.vtiger.documents.CreateDocumentAndVerifyTest">
-        <test-method signature="CreateDocumentAndVerify()[pri:0, instance:com.crm.vtiger.documents.CreateDocumentAndVerifyTest@1ed4ae0f]" started-at="2022-08-07T19:34:10 IST" name="CreateDocumentAndVerify" finished-at="2022-08-07T19:34:44 IST" duration-ms="33691" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateDocumentAndVerify -->
-      </class> <!-- com.crm.vtiger.documents.CreateDocumentAndVerifyTest -->
-      <class name="com.crm.vtiger.contacts.CreateContactsAndVerifyTest">
-        <test-method signature="CreateContactsAndVerify()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@7526515b]" started-at="2022-08-07T19:34:06 IST" name="CreateContactsAndVerify" finished-at="2022-08-07T19:34:43 IST" duration-ms="36758" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateContactsAndVerify -->
-      </class> <!-- com.crm.vtiger.contacts.CreateContactsAndVerifyTest -->
-      <class name="com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest">
-        <test-method signature="CreateSalesOrderwithOpportunities()[pri:0, instance:com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest@76a4ebf2]" started-at="2022-08-07T19:35:02 IST" name="CreateSalesOrderwithOpportunities" finished-at="2022-08-07T19:35:26 IST" duration-ms="23739" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateEmailAndVerify()[pri:0, instance:com.crm.vtiger.email.CreateEmailAndVerifyTest@cb0755b]" started-at="2022-08-12T15:26:08 IST" name="CreateEmailAndVerify" finished-at="2022-08-12T15:26:13 IST" duration-ms="5239" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The element reference of <a id="1" href="javascript:window.close();"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [e7feb9eb-28f8-432b-871c-eff941fb693d, clickElement {id=6456c879-41ea-43fd-b08b-f83192309dc9}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:57423, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9580, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57423/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on WINDOWS (e7feb9eb-28f8-432b-871c-eff941fb693d)] -> id: 1]
-Session ID: e7feb9eb-28f8-432b-871c-eff941fb693d]]>
+              <![CDATA[Email page is not displayed, FAIL expected [Administrator - Email - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: The element reference of <a id="1" href="javascript:window.close();"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [e7feb9eb-28f8-432b-871c-eff941fb693d, clickElement {id=6456c879-41ea-43fd-b08b-f83192309dc9}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:57423, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9580, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57423/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on WINDOWS (e7feb9eb-28f8-432b-871c-eff941fb693d)] -> id: 1]
-Session ID: e7feb9eb-28f8-432b-871c-eff941fb693d
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at com.lexnod.ObjectRepository.OrganizationNamePage.getOrganizationName(OrganizationNamePage.java:23)
-at com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest.CreateSalesOrderwithOpportunities(CreateSalesOrderwithOpportunitiesTest.java:132)
+              <![CDATA[java.lang.AssertionError: Email page is not displayed, FAIL expected [Administrator - Email - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at com.crm.vtiger.email.CreateEmailAndVerifyTest.CreateEmailAndVerify(CreateEmailAndVerifyTest.java:36)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -261,31 +134,125 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:831)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateSalesOrderwithOpportunities -->
-      </class> <!-- com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest -->
-      <class name="scripts.CreateProjects">
-        <test-method signature="createProject()[pri:0, instance:scripts.CreateProjects@2a265ea9]" started-at="2022-08-07T19:34:49 IST" name="createProject" finished-at="2022-08-07T19:35:02 IST" duration-ms="12717" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+        </test-method> <!-- CreateEmailAndVerify -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.email.CreateEmailAndVerifyTest@cb0755b]" started-at="2022-08-12T15:26:20 IST" name="logoutFromAppln" finished-at="2022-08-12T15:26:23 IST" duration-ms="3214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.email.CreateEmailAndVerifyTest@cb0755b]" started-at="2022-08-12T15:26:23 IST" name="closeTheBrowser" finished-at="2022-08-12T15:26:25 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.email.CreateEmailAndVerifyTest -->
+      <class name="com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest@5149d738]" started-at="2022-08-12T15:25:11 IST" name="launchTheBrowser" finished-at="2022-08-12T15:25:17 IST" duration-ms="5536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest@5149d738]" started-at="2022-08-12T15:25:17 IST" name="loginToAppln" finished-at="2022-08-12T15:25:20 IST" duration-ms="2905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateProductWithVendorAndVerify()[pri:0, instance:com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest@5149d738]" started-at="2022-08-12T15:25:20 IST" name="CreateProductWithVendorAndVerify" finished-at="2022-08-12T15:25:25 IST" duration-ms="5442" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Reached error page: about:neterror?e=connectionFailure&u=http%3A//localhost%3A8084/&c=UTF-8&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8084.
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [79245886-9e21-4f4e-a242-c178d55d0e72, get {url=http://localhost:8084/}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:50948, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10388, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50948/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 79245886-9e21-4f4e-a242-c178d55d0e72]]>
+              <![CDATA[Vendor page is not displayed, FAIL expected [Administrator - Vendors - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=connectionFailure&u=http%3A//localhost%3A8084/&c=UTF-8&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A8084.
+              <![CDATA[java.lang.AssertionError: Vendor page is not displayed, FAIL expected [Administrator - Vendors - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest.CreateProductWithVendorAndVerify(CreateProductWithVendorAndVerifyTest.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateProductWithVendorAndVerify -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest@5149d738]" started-at="2022-08-12T15:25:26 IST" name="logoutFromAppln" finished-at="2022-08-12T15:25:31 IST" duration-ms="4855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest@5149d738]" started-at="2022-08-12T15:25:31 IST" name="closeTheBrowser" finished-at="2022-08-12T15:25:39 IST" duration-ms="8137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.products.CreateProductWithVendorAndVerifyTest -->
+      <class name="com.crm.vtiger.organization.CreateOrganizationAndVerifyTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@53fb3dab]" started-at="2022-08-12T15:25:51 IST" name="launchTheBrowser" finished-at="2022-08-12T15:26:02 IST" duration-ms="11223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@53fb3dab]" started-at="2022-08-12T15:26:02 IST" name="loginToAppln" finished-at="2022-08-12T15:26:22 IST" duration-ms="19816" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateOrganizationAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@53fb3dab]" started-at="2022-08-12T15:26:22 IST" name="CreateOrganizationAndVerify" finished-at="2022-08-12T15:26:36 IST" duration-ms="14374" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Organization page is displayed, PASS]]>
+            </line>
+            <line>
+              <![CDATA[Organization name created, TRUE]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateOrganizationAndVerify -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@53fb3dab]" started-at="2022-08-12T15:26:36 IST" name="logoutFromAppln" finished-at="2022-08-12T15:26:38 IST" duration-ms="2137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationAndVerifyTest@53fb3dab]" started-at="2022-08-12T15:26:38 IST" name="closeTheBrowser" finished-at="2022-08-12T15:26:40 IST" duration-ms="1356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.organization.CreateOrganizationAndVerifyTest -->
+      <class name="com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@795509d9]" started-at="2022-08-12T15:24:50 IST" name="launchTheBrowser" finished-at="2022-08-12T15:25:01 IST" duration-ms="11280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@795509d9]" started-at="2022-08-12T15:25:01 IST" name="loginToAppln" finished-at="2022-08-12T15:25:11 IST" duration-ms="10247" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: *[name='user_name']
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [79245886-9e21-4f4e-a242-c178d55d0e72, get {url=http://localhost:8084/}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:50948, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10388, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50948/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 79245886-9e21-4f4e-a242-c178d55d0e72
+Command: [7731e856-e229-4ecc-96a4-b8cb0d1bcff5, findElement {using=name, value=user_name}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:49439, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11404, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49439/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7731e856-e229-4ecc-96a4-b8cb0d1bcff5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name='user_name']
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7731e856-e229-4ecc-96a4-b8cb0d1bcff5, findElement {using=name, value=user_name}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:49439, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11404, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49439/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7731e856-e229-4ecc-96a4-b8cb0d1bcff5
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -298,8 +265,161 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
-at scripts.CreateProjects.createProject(CreateProjects.java:25)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
+at com.lexnod.ObjectRepository.LoginPage.login(LoginPage.java:41)
+at com.lexnod.genericLib.BaseClass.loginToAppln(BaseClass.java:109)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateAssetsWithInvoice()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@795509d9]" started-at="2022-08-12T15:25:11 IST" name="CreateAssetsWithInvoice" finished-at="2022-08-12T15:25:11 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: *[name='user_name']
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7731e856-e229-4ecc-96a4-b8cb0d1bcff5, findElement {using=name, value=user_name}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:49439, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11404, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49439/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7731e856-e229-4ecc-96a4-b8cb0d1bcff5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name='user_name']
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7731e856-e229-4ecc-96a4-b8cb0d1bcff5, findElement {using=name, value=user_name}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:49439, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11404, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49439/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7731e856-e229-4ecc-96a4-b8cb0d1bcff5
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
+at com.lexnod.ObjectRepository.LoginPage.login(LoginPage.java:41)
+at com.lexnod.genericLib.BaseClass.loginToAppln(BaseClass.java:109)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateAssetsWithInvoice -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@795509d9]" started-at="2022-08-12T15:25:11 IST" name="logoutFromAppln" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1660298111872" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest@795509d9]" started-at="2022-08-12T15:25:11 IST" name="closeTheBrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1660298111876" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.Assets.CreateAssetsWithInvoiceTest -->
+      <class name="com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest@235ecd9f]" started-at="2022-08-12T15:24:50 IST" name="launchTheBrowser" finished-at="2022-08-12T15:25:02 IST" duration-ms="12291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest@235ecd9f]" started-at="2022-08-12T15:25:02 IST" name="loginToAppln" finished-at="2022-08-12T15:25:18 IST" duration-ms="15407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateOrganizationsByUsingMoreData()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest@235ecd9f]" started-at="2022-08-12T15:25:18 IST" name="CreateOrganizationsByUsingMoreData" finished-at="2022-08-12T15:25:36 IST" duration-ms="18806" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Failed to convert data to an object
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd, findElement {using=xpath, value=//span[@class='dvHeaderText']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:55982, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12652, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55982/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to convert data to an object
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd, findElement {using=xpath, value=//span[@class='dvHeaderText']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:55982, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12652, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55982/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+at com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest.CreateOrganizationsByUsingMoreData(CreateOrganizationsByUsingMoreDataTest.java:61)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -319,109 +439,106 @@ at java.base/java.lang.Thread.run(Thread.java:831)
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
+            <line>
+              <![CDATA[Organization page is displayed, PASS]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- createProject -->
-      </class> <!-- scripts.CreateProjects -->
-      <class name="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest">
-        <test-method signature="createOrganizationAndContactAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@78e4deb0]" started-at="2022-08-07T19:35:58 IST" name="createOrganizationAndContactAndVerify" finished-at="2022-08-07T19:36:49 IST" duration-ms="51105" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOrganizationAndContactAndVerify -->
-      </class> <!-- com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest -->
-      <class name="dataProvider.BookTicket">
-        <test-method signature="booking_Tickets(java.lang.String,java.lang.String,int)[pri:0, instance:dataProvider.BookTicket@6e6f2380]" started-at="2022-08-07T19:35:02 IST" name="booking_Tickets" data-provider="bookingTheTickets" finished-at="2022-08-07T19:35:02 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Bangalore]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Mysore]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[200]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- booking_Tickets -->
-        <test-method signature="booking_Tickets(java.lang.String,java.lang.String,int)[pri:0, instance:dataProvider.BookTicket@6e6f2380]" started-at="2022-08-07T19:35:02 IST" name="booking_Tickets" data-provider="bookingTheTickets" finished-at="2022-08-07T19:35:02 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Bangalore]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ooty]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[300]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- booking_Tickets -->
-        <test-method signature="booking_Tickets(java.lang.String,java.lang.String,int)[pri:0, instance:dataProvider.BookTicket@6e6f2380]" started-at="2022-08-07T19:35:02 IST" name="booking_Tickets" data-provider="bookingTheTickets" finished-at="2022-08-07T19:35:02 IST" duration-ms="14" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mysore]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ooty]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[150]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- booking_Tickets -->
-      </class> <!-- dataProvider.BookTicket -->
-      <class name="com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest">
-        <test-method signature="CreateContactWithMoreDataAndVerify()[pri:0, instance:com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest@6d4d66d2]" started-at="2022-08-07T19:34:44 IST" name="CreateContactWithMoreDataAndVerify" finished-at="2022-08-07T19:35:14 IST" duration-ms="30598" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- CreateOrganizationsByUsingMoreData -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest@235ecd9f]" started-at="2022-08-12T15:25:37 IST" name="logoutFromAppln" finished-at="2022-08-12T15:25:37 IST" duration-ms="23" status="FAIL">
+          <exception class="org.openqa.selenium.json.JsonException">
             <message>
-              <![CDATA[Unable to locate element: #\31 
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+              <![CDATA[java.lang.reflect.InvocationTargetException
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [1168529f-f9d7-4c70-96cd-6bf8faed73cc, findElement {using=id, value=1}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:58913, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 7664, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58913/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1168529f-f9d7-4c70-96cd-6bf8faed73cc]]>
+Command: [5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd, actions {actions=[org.openqa.selenium.interactions.Sequence@1ddc7b3b]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:55982, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12652, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55982/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #\31 
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.1.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [1168529f-f9d7-4c70-96cd-6bf8faed73cc, findElement {using=id, value=1}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.1, moz:accessibilityChecks: false, moz:buildID: 20220729222726, moz:debuggerAddress: localhost:58913, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 7664, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58913/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1168529f-f9d7-4c70-96cd-6bf8faed73cc
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+Command: [5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd, actions {actions=[org.openqa.selenium.interactions.Sequence@1ddc7b3b]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:55982, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12652, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55982/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
+at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
+at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
+at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
+at org.openqa.selenium.json.Json.toJson(Json.java:42)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:127)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:637)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
+at com.lexnod.genericLib.WebDriverCommonLibrary.mouseHoverOnElement(WebDriverCommonLibrary.java:268)
+at com.lexnod.ObjectRepository.HomePage.clickSignoutLink(HomePage.java:111)
+at com.lexnod.genericLib.BaseClass.logoutFromAppln(BaseClass.java:119)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:660)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
+at org.openqa.selenium.json.Json.toJson(Json.java:40)
+... 32 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
+... 53 more
+Caused by: org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Organization Name Already Exists!: 
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd, findElement {using=xpath, value=//img[@src='themes/softed/images/user.PNG']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:55982, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12652, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55982/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5e323160-6f2c-44e3-bfde-9ff4ee4bb9fd
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
@@ -433,9 +550,88 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at com.lexnod.ObjectRepository.OrganizationNamePage.getOrganizationName(OrganizationNamePage.java:23)
-at com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest.CreateContactWithMoreDataAndVerify(CreateContactWithMoreDataAndVerifyTest.java:115)
+at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
+at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:260)
+at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:209)
+at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
+at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
+... 58 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest@235ecd9f]" started-at="2022-08-12T15:25:37 IST" name="closeTheBrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1660298137660" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest -->
+      <class name="com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest">
+        <test-method signature="CreateCampaignWithProductAndVerify()[pri:0, instance:com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest@712625fd]" started-at="2022-08-12T15:26:08 IST" name="CreateCampaignWithProductAndVerify" finished-at="2022-08-12T15:26:34 IST" duration-ms="25885" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[VTiger Login Page is Displayed, PASS]]>
+            </line>
+            <line>
+              <![CDATA[Campaign page is displayed, PASS]]>
+            </line>
+            <line>
+              <![CDATA[Campaign is created, PASS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateCampaignWithProductAndVerify -->
+      </class> <!-- com.crm.vtiger.campaign.CreateCampaignWithProductAndVerifyTest -->
+      <class name="com.crm.vtiger.documents.CreateDocumentAndVerifyTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.documents.CreateDocumentAndVerifyTest@19e4653c]" started-at="2022-08-12T15:24:50 IST" name="launchTheBrowser" finished-at="2022-08-12T15:25:01 IST" duration-ms="11243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.documents.CreateDocumentAndVerifyTest@19e4653c]" started-at="2022-08-12T15:25:01 IST" name="loginToAppln" finished-at="2022-08-12T15:25:08 IST" duration-ms="7145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateDocumentAndVerify()[pri:0, instance:com.crm.vtiger.documents.CreateDocumentAndVerifyTest@19e4653c]" started-at="2022-08-12T15:25:08 IST" name="CreateDocumentAndVerify" finished-at="2022-08-12T15:25:45 IST" duration-ms="36480" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Document page is displayed, PASS]]>
+            </line>
+            <line>
+              <![CDATA[Document is created, PASS]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateDocumentAndVerify -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.documents.CreateDocumentAndVerifyTest@19e4653c]" started-at="2022-08-12T15:25:45 IST" name="logoutFromAppln" finished-at="2022-08-12T15:25:47 IST" duration-ms="2534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.documents.CreateDocumentAndVerifyTest@19e4653c]" started-at="2022-08-12T15:25:47 IST" name="closeTheBrowser" finished-at="2022-08-12T15:25:51 IST" duration-ms="3480" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.documents.CreateDocumentAndVerifyTest -->
+      <class name="com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest@3a7442c7]" started-at="2022-08-12T15:25:37 IST" name="launchTheBrowser" finished-at="2022-08-12T15:25:47 IST" duration-ms="9410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest@3a7442c7]" started-at="2022-08-12T15:25:47 IST" name="loginToAppln" finished-at="2022-08-12T15:25:51 IST" duration-ms="4661" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateOpportunitiesWithContactAndVerify()[pri:0, instance:com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest@3a7442c7]" started-at="2022-08-12T15:25:51 IST" name="CreateOpportunitiesWithContactAndVerify" finished-at="2022-08-12T15:25:57 IST" duration-ms="5377" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Opportunity page is not displayed, FAIL expected [Administrator - Opportunities - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Opportunity page is not displayed, FAIL expected [Administrator - Opportunities - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest.CreateOpportunitiesWithContactAndVerify(CreateOpportunitiesWithContactAndVerifyTest.java:39)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -453,10 +649,295 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:831)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- CreateOpportunitiesWithContactAndVerify -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest@3a7442c7]" started-at="2022-08-12T15:25:58 IST" name="logoutFromAppln" finished-at="2022-08-12T15:26:00 IST" duration-ms="2334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest@3a7442c7]" started-at="2022-08-12T15:26:00 IST" name="closeTheBrowser" finished-at="2022-08-12T15:26:03 IST" duration-ms="2299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.opportunities.CreateOpportunitiesWithContactAndVerifyTest -->
+      <class name="com.crm.vtiger.contacts.CreateContactsAndVerifyTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@663c9e7a]" started-at="2022-08-12T15:24:50 IST" name="launchTheBrowser" finished-at="2022-08-12T15:25:00 IST" duration-ms="10348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@663c9e7a]" started-at="2022-08-12T15:25:00 IST" name="loginToAppln" finished-at="2022-08-12T15:25:03 IST" duration-ms="3216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateContactsAndVerify()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@663c9e7a]" started-at="2022-08-12T15:25:03 IST" name="CreateContactsAndVerify" finished-at="2022-08-12T15:25:09 IST" duration-ms="5279" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Contacts page is not displayed, FAIL expected [Administrator - Contacts - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Contacts page is not displayed, FAIL expected [Administrator - Contacts - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at com.crm.vtiger.contacts.CreateContactsAndVerifyTest.CreateContactsAndVerify(CreateContactsAndVerifyTest.java:44)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateContactsAndVerify -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@663c9e7a]" started-at="2022-08-12T15:25:14 IST" name="logoutFromAppln" finished-at="2022-08-12T15:25:16 IST" duration-ms="1888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.contacts.CreateContactsAndVerifyTest@663c9e7a]" started-at="2022-08-12T15:25:16 IST" name="closeTheBrowser" finished-at="2022-08-12T15:25:18 IST" duration-ms="2255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.contacts.CreateContactsAndVerifyTest -->
+      <class name="com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest@6bbe85a8]" started-at="2022-08-12T15:25:18 IST" name="launchTheBrowser" finished-at="2022-08-12T15:25:28 IST" duration-ms="9522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest@6bbe85a8]" started-at="2022-08-12T15:25:28 IST" name="loginToAppln" finished-at="2022-08-12T15:25:33 IST" duration-ms="5424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateSalesOrderwithOpportunities()[pri:0, instance:com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest@6bbe85a8]" started-at="2022-08-12T15:25:33 IST" name="CreateSalesOrderwithOpportunities" finished-at="2022-08-12T15:25:37 IST" duration-ms="4375" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[Element <a id="more" class="drop_downnew" href="index.php?module=SalesOrder&action=index" name="Sales Order"> could not be scrolled into view
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ccf6c68-2f65-4adc-a8c9-5586d2b310bc, clickElement {id=e1611ea8-7a16-4675-84fd-d39b33fbd85a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:56343, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 13588, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56343/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (0ccf6c68-2f65-4adc-a8c9-5586d2b310bc)] -> xpath: //a[@href='index.php?module=SalesOrder&action=index' ]]
+Session ID: 0ccf6c68-2f65-4adc-a8c9-5586d2b310bc]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <a id="more" class="drop_downnew" href="index.php?module=SalesOrder&action=index" name="Sales Order"> could not be scrolled into view
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [0ccf6c68-2f65-4adc-a8c9-5586d2b310bc, clickElement {id=e1611ea8-7a16-4675-84fd-d39b33fbd85a}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:56343, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 13588, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56343/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (0ccf6c68-2f65-4adc-a8c9-5586d2b310bc)] -> xpath: //a[@href='index.php?module=SalesOrder&action=index' ]]
+Session ID: 0ccf6c68-2f65-4adc-a8c9-5586d2b310bc
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+at com.lexnod.ObjectRepository.HomePage.clickSalesOrderModule(HomePage.java:99)
+at com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest.CreateSalesOrderwithOpportunities(CreateSalesOrderwithOpportunitiesTest.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateSalesOrderwithOpportunities -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest@6bbe85a8]" started-at="2022-08-12T15:25:38 IST" name="logoutFromAppln" finished-at="2022-08-12T15:25:43 IST" duration-ms="5415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest@6bbe85a8]" started-at="2022-08-12T15:25:43 IST" name="closeTheBrowser" finished-at="2022-08-12T15:25:56 IST" duration-ms="12461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.salesorder.CreateSalesOrderwithOpportunitiesTest -->
+      <class name="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@33065d67]" started-at="2022-08-12T15:26:03 IST" name="launchTheBrowser" finished-at="2022-08-12T15:26:09 IST" duration-ms="6342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@33065d67]" started-at="2022-08-12T15:26:09 IST" name="loginToAppln" finished-at="2022-08-12T15:26:12 IST" duration-ms="3174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="createOrganizationAndContactAndVerify()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@33065d67]" started-at="2022-08-12T15:26:12 IST" name="createOrganizationAndContactAndVerify" finished-at="2022-08-12T15:26:20 IST" duration-ms="7357" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Organization page is not displayed the displayed page is - Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM expected [Administrator - Organizations - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Organization page is not displayed the displayed page is - Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM expected [Administrator - Organizations - vtiger CRM 5 - Commercial Open Source CRM] but found [Administrator - Home - vtiger CRM 5 - Commercial Open Source CRM]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest.createOrganizationAndContactAndVerify(CreateOrganization_ContactAndVerifyTest.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrganizationAndContactAndVerify -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@33065d67]" started-at="2022-08-12T15:26:20 IST" name="logoutFromAppln" finished-at="2022-08-12T15:26:23 IST" duration-ms="2168" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[Element <a class="drop_down_usersettings" href="index.php?module=Users&action=Logout"> could not be scrolled into view
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2fb03936-3d7f-4bfb-a627-d0340a99b9bd, clickElement {id=9d7bab35-bfbb-46fc-b8dd-10a8a9871e11}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:54210, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12112, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54210/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (2fb03936-3d7f-4bfb-a627-d0340a99b9bd)] -> xpath: //a[text()='Sign Out']]
+Session ID: 2fb03936-3d7f-4bfb-a627-d0340a99b9bd]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <a class="drop_down_usersettings" href="index.php?module=Users&action=Logout"> could not be scrolled into view
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'LAPTOP-3AI9QJI2', ip: '192.168.253.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2fb03936-3d7f-4bfb-a627-d0340a99b9bd, clickElement {id=9d7bab35-bfbb-46fc-b8dd-10a8a9871e11}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:54210, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12112, moz:profile: C:\Users\ARUN\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54210/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (2fb03936-3d7f-4bfb-a627-d0340a99b9bd)] -> xpath: //a[text()='Sign Out']]
+Session ID: 2fb03936-3d7f-4bfb-a627-d0340a99b9bd
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+at com.lexnod.ObjectRepository.HomePage.clickSignoutLink(HomePage.java:112)
+at com.lexnod.genericLib.BaseClass.logoutFromAppln(BaseClass.java:119)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:660)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest@33065d67]" started-at="2022-08-12T15:26:23 IST" name="closeTheBrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1660298183165" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
+      </class> <!-- com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest -->
+      <class name="com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest">
+        <test-method is-config="true" signature="launchTheBrowser()[pri:0, instance:com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest@53045c6c]" started-at="2022-08-12T15:24:50 IST" name="launchTheBrowser" finished-at="2022-08-12T15:25:01 IST" duration-ms="11176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchTheBrowser -->
+        <test-method is-config="true" signature="loginToAppln()[pri:0, instance:com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest@53045c6c]" started-at="2022-08-12T15:25:01 IST" name="loginToAppln" finished-at="2022-08-12T15:25:13 IST" duration-ms="11787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAppln -->
+        <test-method signature="CreateContactWithMoreDataAndVerify()[pri:0, instance:com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest@53045c6c]" started-at="2022-08-12T15:25:13 IST" name="CreateContactWithMoreDataAndVerify" finished-at="2022-08-12T15:25:51 IST" duration-ms="38238" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Contacts page is displayed, PASS]]>
+            </line>
+            <line>
+              <![CDATA[Contact is created, PASS]]>
+            </line>
+          </reporter-output>
         </test-method> <!-- CreateContactWithMoreDataAndVerify -->
+        <test-method is-config="true" signature="logoutFromAppln()[pri:0, instance:com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest@53045c6c]" started-at="2022-08-12T15:25:51 IST" name="logoutFromAppln" finished-at="2022-08-12T15:25:55 IST" duration-ms="3523" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromAppln -->
+        <test-method is-config="true" signature="closeTheBrowser()[pri:0, instance:com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest@53045c6c]" started-at="2022-08-12T15:25:55 IST" name="closeTheBrowser" finished-at="2022-08-12T15:26:08 IST" duration-ms="13093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheBrowser -->
       </class> <!-- com.crm.vtiger.contacts.CreateContactWithMoreDataAndVerifyTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

@@ -5,13 +5,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.lexnod.ObjectRepository.CampaignsPage;
 import com.lexnod.ObjectRepository.CreateNewCampaignPage;
 import com.lexnod.ObjectRepository.HomePage;
 import com.lexnod.ObjectRepository.LoginPage;
 import com.lexnod.ObjectRepository.ProductNamePage;
+import com.lexnod.genericLib.BaseClass;
 import com.lexnod.genericLib.ExcelFileLibrary;
 import com.lexnod.genericLib.JavaUtility;
 import com.lexnod.genericLib.PropertyFileLibrary;
@@ -65,11 +68,9 @@ public class CreateCampaignWithProductAndVerifyTest {
 
 		// VERIFYING V-TIGER LOGIN PAGE IS DISPLAYED OR NOT
 		String loginTitle = "vtiger CRM 5 - Commercial Open Source CRM";
-		if (driver.getTitle().equals(loginTitle)) {
-			System.out.println("VTiger Login Page is Displayed, PASS");
-		} else {
-			System.out.println("VTiger Login page is not displayed, FAIL");
-		}
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertEquals(driver.getTitle(), loginTitle , "VTiger Login page is not displayed, FAIL");
+		Reporter.log("VTiger Login Page is Displayed, PASS", true);
 
 		// giving login details and clicking on login
 		LoginPage loginPage = new LoginPage(driver);
@@ -85,11 +86,8 @@ public class CreateCampaignWithProductAndVerifyTest {
 
 		// verify campaign page is displayed or not
 		String campaignTitle = "Administrator - Campaigns - vtiger CRM 5 - Commercial Open Source CRM";
-		if (driver.getTitle().equals(campaignTitle)) {
-			System.out.println("Campaign page is displayed, PASS");
-		} else {
-			System.out.println("Campaign page is not displayed, FAIL");
-		}
+		softAssert.assertEquals(driver.getTitle(), campaignTitle, "Campaign page is not displayed, FAIL");
+		Reporter.log("Campaign page is displayed, PASS", true);
 
 		// click on create campaign img
 		CampaignsPage campaignPage = new CampaignsPage(driver);
@@ -119,17 +117,9 @@ public class CreateCampaignWithProductAndVerifyTest {
 
 		// verify the campaign is created or not
 		String campaign = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-		if (campaign.contains(campaignName)) {
-			System.out.println("Campaign is created, PASS");
-		} else {
-			System.out.println("Campaign is not created, FAIL");
-		}
+		softAssert.assertTrue(campaign.contains(campaignName), "Campaign is not created, FAIL");
+		Reporter.log("Campaign is created, PASS", true);
 
-		// signout
-		home.clickSignoutLink(driver);
-
-		// close the browser
-		driver.close();
 	}
 
 }

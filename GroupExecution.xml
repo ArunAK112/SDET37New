@@ -6,7 +6,7 @@
 		<include name ="smokeTest"> </include>
 	</run>
 </groups>
-  <test thread-count="5" name="Test">
+  <test name="Test">
     <classes>
       <class name="com.crm.vtiger.organization.CreateOrganizationsByUsingMoreDataTest"/>
       <class name="dataProvider.FetchDataFromExcelTest"/>

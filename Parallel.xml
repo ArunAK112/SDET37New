@@ -3,8 +3,7 @@
 <suite name="Suite" parallel="tests" thread-count="3">
 	<test name="TestRunner1">
 		<classes>
-			<class
-				name="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest" />
+			<class name="com.crm.vtiger.organization.CreateOrganization_ContactAndVerifyTest" />
 		</classes>
 	</test>
 	<test name="TestRunner2">

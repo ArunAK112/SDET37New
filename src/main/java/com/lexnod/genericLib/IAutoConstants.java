@@ -16,5 +16,6 @@ public interface IAutoConstants {
 	String DBUrl = "jdbc:mysql://localhost:3306/";
 	String DBUsername = "root";
 	String DBPassword = "root";
+	String REPORT_PATH ="./Extent Reports";
 	
 }
