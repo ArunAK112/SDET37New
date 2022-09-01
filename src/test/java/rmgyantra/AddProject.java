@@ -39,7 +39,7 @@ public class AddProject {
 			connection.close();
 			System.out.println("Database closed");
 		}
-		
+		//push to git hub
 	}
 
 }
