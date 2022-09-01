@@ -8,7 +8,7 @@ import java.sql.Statement;
 import com.mysql.cj.jdbc.Driver;
 
 public class AddProject {
-
+//CHANGES MADE BY NISHCHITHA
 	public static void main(String[] args) throws SQLException {
 		
 		Driver driverRef;
